@@ -9,6 +9,11 @@ import com.claire.mind.master.interactive.storage.GameStorage;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.util.*;
 
 // Inject the service to controller
@@ -16,19 +21,34 @@ import java.util.*;
 @AllArgsConstructor
 public class GameService {
     // Pass player's information and then create a game
-    public Game createGame(Player player){
+    public Game createGame(Player player) throws IOException, InterruptedException {
         Game game = new Game();
         game.setGameId(UUID.randomUUID().toString());
         game.setPlayer(player);
         game.setGuesses(new ArrayList<>());
         game.setStepResults(new ArrayList<>());
         // need to be replaced later
-        game.setSecretNumber(new int[]{1, 2, 3, 4});
+        int[] secretNumber = queryNumber("https://www.random.org/integers/?num=4&min=0&max=7&col=4&base=10&format=plain&rnd=new");
+        game.setSecretNumber(secretNumber);
         game.setStatus(GameStatus.IN_PROGRESS);
 
         GameStorage.getInstance().setGame(game);
 
         return game;
+    }
+
+    public int[] queryNumber(String uri) throws IOException, InterruptedException {
+        int[] secretNumber = new int[4];
+        HttpRequest request = HttpRequest.newBuilder().uri(URI.create(uri)).build();
+        HttpClient client = HttpClient.newHttpClient();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        String[] responseArray = response.body().trim().split("\\s");
+        for (int i = 0; i < 4; i++){
+            secretNumber[i] = Integer.parseInt(responseArray[i]);
+        }
+        System.out.println("Response: " + response.body());
+
+        return secretNumber;
     }
 
     // Pass in GameId, Location, and the number

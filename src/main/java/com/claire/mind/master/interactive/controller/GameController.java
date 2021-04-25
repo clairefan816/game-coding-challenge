@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
+
 @RestController
 @Slf4j
 @AllArgsConstructor
@@ -24,7 +26,7 @@ public class GameController {
     private final GameService gameService;
 
     @PostMapping("/game")
-    public ResponseEntity<Game> startNewGame(@RequestBody Player player){
+    public ResponseEntity<Game> startNewGame(@RequestBody Player player) throws IOException, InterruptedException {
         log.info("start game request: {}", player);
         // Wrap response into entity
         // gameService.createGame(player);
