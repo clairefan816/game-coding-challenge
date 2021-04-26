@@ -15,7 +15,6 @@
     height: calc(90vh - 10px);
     margin: 3em auto 0;
     /* border: 1px solid green; */
-
     display: grid;
     grid-template-areas:
     "header header"
@@ -35,7 +34,6 @@
     font-size:x-large;
     /* border: 2px solid Green; */
 }
-
 .board-container{
     grid-area: board-container;
     /* border: 2px solid Green; */
@@ -328,6 +326,8 @@
     display: flex;
     flex-flow: column;
     justify-content: space-around;
+    background: -webkit-linear-gradient(to right, #FFFFFF, #F7EEED);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #F7EEED); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .flip-card {
