@@ -1,8 +1,8 @@
 <img src="logo.png" align="right" width="140px" height="120px"/>
-# Web Game App: Music Mind
-> A web app created with Spring MVC
-elements ********************
-ergsdfkjbgsldfkjghsldgfbs ssdgsfdg
+
+# Music Mind [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+> A web game designed from mind master game
+Elements in beau
 
 ## Table of Contents
 
