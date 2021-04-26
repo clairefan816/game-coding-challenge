@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=
     , initial-scale=1.0">
     <title>Claire MasterMind Game</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="main-content">
@@ -108,16 +110,16 @@
         </div>
 
         <div class="key-container">
-            <div style="z-index: 12;"></div>
-            <div style="z-index: 11;"></div>
-            <div style="z-index: 10;"></div>
-            <div style="z-index: 9;"></div>
-            <div style="z-index: 8;"></div>
-            <div style="z-index: 7;"></div>
-            <div style="z-index: 6;"></div>
-            <div style="z-index: 5;"></div>
-            <div style="z-index: 4;"></div>
-            <div style="z-index: 3;"></div>
+            <div id="number-0" style="z-index: 12;"></div>
+            <div id="number-1" style="z-index: 11;"></div>
+            <div id="number-2" style="z-index: 10;"></div>
+            <div id="number-3" style="z-index: 9;"></div>
+            <div id="number-4" style="z-index: 8;"></div>
+            <div id="number-5" style="z-index: 7;"></div>
+            <div id="number-6" style="z-index: 6;"></div>
+            <div id="number-7" style="z-index: 5;"></div>
+            <div id="number-8" style="z-index: 4;"></div>
+            <div id="number-9" style="z-index: 3;"></div>
         </div>
     </div>
     <div class="info-container">
@@ -126,9 +128,17 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <p>Start New Game</p>
+                        <div class="choose-button" id="easy">Easy Game</div>
+                        <div class="choose-button">Hard Game</div>
+                        <span class="material-icons md-36 flip" >
+                                chevron_right
+                            </span>
                     </div>
                     <div class="flip-card-back">
                         <p>Back</p>
+                        <span class="material-icons md-36 flip" >
+                                chevron_left
+                            </span>
                     </div>
                 </div>
             </div>
@@ -160,4 +170,5 @@
     </div>
 </div>
 </body>
+<script src="js/script.js"></script>
 </html>
