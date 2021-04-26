@@ -1,2 +1,4 @@
+
 # game-coding-challenge
-![logo](https://user-images.githubusercontent.com/54572005/116138622-e523ef80-a689-11eb-9b15-8f9c99f73cb5.png = 100 * 100)
+
+![logo](https://user-images.githubusercontent.com/54572005/116141156-2a95ec00-a68d-11eb-9a19-6c93ba5bbe25.png width="20" height="20" )
