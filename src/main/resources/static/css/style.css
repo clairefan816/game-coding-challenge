@@ -112,11 +112,19 @@
     justify-content: space-between;
 }
 
-.one-guess .box{
+.one-box{
+    color: white;
+    font-size: large;
     border: 2px solid transparent;
+    border-radius: 5px;
     height: 25px;
     width: 80px;
     margin: 5px 5px 5px 5px;
+    box-shadow:  5px 5px 15px hsl(331, 15%, 90%);
+    /*background: linear-gradient(135deg, hsl(331, 15%, 90%), hsl(331, 15%, 88%));*/
+    /*!*border-radius: 32px;*!*/
+    /*box-shadow: inset 5px 5px 7px 5px rgba(0, 0, 0, 0.1),*/
+    /*inset -5px -5px 7px 5px rgba(247, 251, 255, 0.6);*/
 }
 
 .letter-content{
