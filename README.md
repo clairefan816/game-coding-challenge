@@ -1,17 +1,28 @@
-<img src="logo.png" align="right" width="140px" height="120px"/>
+<img src="logo.png" width="160px" height="130px"/>
 
-# Music Mind [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-> A web game designed from mind master game
-Elements in beau
-## Table of Contents
+# Musicmind [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+> A web game adapted from classical Mastermind game, with pitch recognition as an added challenge.
+## 🚩 Table of Contents
 
-- [Introduction](#introduction)
+- [Background](#Background)
 - [Features](#features)
-- [Feedback](#feedback)
-- [Contributors](#contributors)
-- [Build Process](#build-process)
-- [Backers](#backers-)
+- [Examples](#Examples)
+- [Install](#Install)
+- [Maintainer](#Maintainer)
+- [FAQ](#FAQ)
 - [Sponsors](#sponsors-)
-- [Acknowledgments](#acknowledgments)
+- [License](#License)
 
-## Introduction
+## 📕 Background
+
+## 🎨 Features
+
+## 🐾 Examples
+
+## 🔧 Install
+
+## 🤸 Maintainer
+
+## 💬 FAQ
+
+## 📜 License

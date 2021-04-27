@@ -5,9 +5,8 @@ import com.claire.mind.master.interactive.exception.InvalidGuessException;
 import com.claire.mind.master.interactive.exception.NotFoundException;
 import com.claire.mind.master.interactive.model.Game;
 import com.claire.mind.master.interactive.model.GameGuess;
-import com.claire.mind.master.interactive.model.Player;
+import com.claire.mind.master.interactive.model.PlayerPreference;
 import com.claire.mind.master.interactive.service.GameService;
-import com.claire.mind.master.interactive.storage.GameStorage;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -26,11 +25,11 @@ public class GameController {
     private final GameService gameService;
 
     @PostMapping("/game")
-    public ResponseEntity<Game> startNewGame(@RequestBody Player player) throws IOException, InterruptedException {
-        log.info("start game request: {}", player);
+    public ResponseEntity<Game> startNewGame(@RequestBody PlayerPreference playerPreference) throws IOException, InterruptedException {
+        log.info("start game request: {}", playerPreference);
         // Wrap response into entity
-        // gameService.createGame(player);
-        return ResponseEntity.ok(gameService.createGame(player));
+        // gameService.createGame(playerPreference);
+        return ResponseEntity.ok(gameService.createGame(playerPreference));
     }
 
     @PostMapping("/game/guess")

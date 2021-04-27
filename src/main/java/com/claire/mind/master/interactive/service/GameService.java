@@ -2,7 +2,6 @@ package com.claire.mind.master.interactive.service;
 
 import com.claire.mind.master.interactive.exception.InvalidGameException;
 import com.claire.mind.master.interactive.exception.InvalidGuessException;
-import com.claire.mind.master.interactive.exception.InvalidParamException;
 import com.claire.mind.master.interactive.exception.NotFoundException;
 import com.claire.mind.master.interactive.model.*;
 import com.claire.mind.master.interactive.storage.GameStorage;
@@ -20,11 +19,11 @@ import java.util.*;
 @Service
 @AllArgsConstructor
 public class GameService {
-    // Pass player's information and then create a game
-    public Game createGame(Player player) throws IOException, InterruptedException {
+    // Pass playerPreference's information and then create a game
+    public Game createGame(PlayerPreference playerPreference) throws IOException, InterruptedException {
         Game game = new Game();
         game.setGameId(UUID.randomUUID().toString());
-        game.setPlayer(player);
+        game.setPlayerPreference(playerPreference);
         game.setGuesses(new ArrayList<>());
         game.setStepResults(new ArrayList<>());
         // need to be replaced later

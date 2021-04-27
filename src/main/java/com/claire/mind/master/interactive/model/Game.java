@@ -7,7 +7,7 @@ import java.util.List;
 @Data
 public class Game {
     private String gameId;
-    private Player player;
+    private PlayerPreference playerPreference;
     private int[] secretNumber;
     private List<int[]> guesses;
     private List<StepResult> stepResults;
