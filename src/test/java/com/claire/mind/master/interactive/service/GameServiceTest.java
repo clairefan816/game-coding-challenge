@@ -1,14 +1,8 @@
 package com.claire.mind.master.interactive.service;
 
 import com.claire.mind.master.interactive.MindMasterInteractiveApplication;
-import com.claire.mind.master.interactive.exception.InvalidGameException;
-import com.claire.mind.master.interactive.exception.InvalidGuessException;
-import com.claire.mind.master.interactive.exception.NoResponseException;
-import com.claire.mind.master.interactive.exception.NotFoundException;
-import com.claire.mind.master.interactive.model.Game;
-import com.claire.mind.master.interactive.model.GameGuess;
-import com.claire.mind.master.interactive.model.PlayerPreference;
-import com.claire.mind.master.interactive.model.StepResult;
+import com.claire.mind.master.interactive.exception.*;
+import com.claire.mind.master.interactive.model.*;
 import com.claire.mind.master.interactive.storage.GameStorage;
 import org.junit.After;
 import org.junit.Before;
@@ -105,7 +99,10 @@ public class GameServiceTest {
     }
 
     @Test
-    public void queryNumber() throws IOException, NoResponseException, InterruptedException, InvalidGameException, NotFoundException, InvalidGuessException {
+    public void checkPlayGme_twoGuessRounds() throws IOException,
+            NoResponseException,
+            InterruptedException,
+            InvalidGameException, NotFoundException, InvalidGuessException {
         Game testGame = gameService.createGame(PlayerPreference.HARD);
         String testGameId = testGame.getGameId();
         int[] testGuess1 = {1, 1, 1, 1};
@@ -132,4 +129,35 @@ public class GameServiceTest {
         assertEquals(3, step2.getA());
         assertEquals(0, step2.getB());
     }
+
+    @Test
+    public void checkWinPlay() throws IOException, NoResponseException, InterruptedException,
+            InvalidGameException, NotFoundException, InvalidGuessException {
+        Game checkRightResultGame = gameService.createGame(PlayerPreference.HARD);
+        String testRightGameId = checkRightResultGame.getGameId();
+        int[] testRightGuess = {1, 2, 3, 4};
+        GameGuess rightGuess = new GameGuess();
+        rightGuess.setGameId(testRightGameId);
+        rightGuess.setGuess(testRightGuess);
+        Game rightResultGame = gameService.playGame(rightGuess);
+        assertEquals(GameStatus.PLAYER_VICTORY, rightResultGame.getStatus());
+    }
+
+
+    @Test
+    public void checkLostPlay() throws IOException, NoResponseException, InterruptedException,
+            InvalidGameException, NotFoundException, InvalidGuessException, InvalidParamException {
+        Game checkLostResultGame = gameService.createGame(PlayerPreference.HARD);
+        String testLostGameId = checkLostResultGame.getGameId();
+        int[] oneGuess = {1, 1, 1, 1};
+        GameGuess wrongGuess = new GameGuess();
+        wrongGuess.setGameId(testLostGameId);
+        wrongGuess.setGuess(oneGuess);
+
+        for (int i = 0; i < 10; i++){
+            gameService.playGame(wrongGuess);
+        }
+        assertEquals(GameStatus.PLAYER_LOST, gameService.retrieveGame(testLostGameId).getStatus());
+    }
+
 }
