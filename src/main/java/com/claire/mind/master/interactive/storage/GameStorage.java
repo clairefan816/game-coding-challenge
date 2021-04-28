@@ -26,6 +26,10 @@ public class GameStorage {
         return games;
     }
 
+    public Game getGame(String gameId) {
+        return games.get(gameId);
+    }
+
     public void setGame(Game game){
         games.put(game.getGameId(), game);
     }
