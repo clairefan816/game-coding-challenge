@@ -1,9 +1,6 @@
 package com.claire.mind.master.interactive.service;
 
-import com.claire.mind.master.interactive.exception.InvalidGameException;
-import com.claire.mind.master.interactive.exception.InvalidGuessException;
-import com.claire.mind.master.interactive.exception.NoResponseException;
-import com.claire.mind.master.interactive.exception.NotFoundException;
+import com.claire.mind.master.interactive.exception.*;
 import com.claire.mind.master.interactive.model.*;
 import com.claire.mind.master.interactive.storage.GameStorage;
 import lombok.AllArgsConstructor;
@@ -166,16 +163,29 @@ public class GameService {
                 map.put(newGuess[i], map.get(newGuess[i]) - 1);
             }
         }
-        stepResult.setMatchDigitAndPosition(matchDigitAndPosition);
-        stepResult.setMatchDigit(matchDigit);
+        stepResult.setA(matchDigitAndPosition);
+        stepResult.setB(matchDigit);
         return stepResult;
     }
 
     public boolean checkWin(StepResult stepResult){
-        if (stepResult.getMatchDigitAndPosition() == Constants.Num_Of_Digits_One_Round){
+        if (stepResult.getA() == Constants.Num_Of_Digits_One_Round){
             return true;
         }
         return false;
     }
 
+    /**
+     * Retrieve the game by gameId
+     * @param gameId String
+     * @return Object Game
+     * @throws InvalidParamException
+     */
+    public Game retrieveGame(String gameId) throws InvalidParamException {
+        if (!GameStorage.getInstance().getGames().containsKey(gameId)){
+            throw new InvalidParamException("Game with provided gameId doesn't exist");
+        }
+        Game game = GameStorage.getInstance().getGames().get(gameId);
+        return game;
+    }
 }
