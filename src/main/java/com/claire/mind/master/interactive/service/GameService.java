@@ -46,17 +46,6 @@ public class GameService {
         // Create new Game object
         Game game = new Game(UUID.randomUUID().toString(), playerPreference,
                 GameStatus.IN_PROGRESS, secretNumber, new ArrayList<>(), new ArrayList<>());
-//        // Generate UUID as gameId
-//        game.setGameId(UUID.randomUUID().toString());
-//        game.setPlayerPreference(playerPreference);
-//        game.setGuesses(new ArrayList<>());
-//        game.setStepResults(new ArrayList<>());
-
-
-
-
-//        game.setSecretNumber(secretNumber);
-//        game.setStatus(GameStatus.IN_PROGRESS);
 
         // store the game information to the GameStorage
         GameStorage.getInstance().setGame(game);
@@ -148,11 +137,14 @@ public class GameService {
     }
 
     /**
-     * Check if it is a valid round
-     * @param oldGuesses
-     * @return
+     * Check if it is a valid round for add one more around
+     * The Upper limit of the valid round is 8 here (inclusive)
+     * Because 1) Round number start from 0; 2) Max Round number is 9; 3) This method should
+     * guarantee the next coming round is also a valid round.
+     * @param oldGuesses List<int[]>
+     * @return boolean
      */
-    private boolean checkValidRound(List<int[]> oldGuesses) {
+    public boolean checkValidRound(List<int[]> oldGuesses) {
         int round = oldGuesses.size();
         if (round + 1 > Constants.MAX_Rounds_Of_GUESSES){
             return false;
