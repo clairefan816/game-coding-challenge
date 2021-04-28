@@ -93,9 +93,6 @@ public class GameService {
         return secretNumber;
     }
 
-    // Pass in GameId, Location, and the number
-    // Make a move
-    // Find the game, put the number in the location
 
     /**
      * Play the game, check the game status
