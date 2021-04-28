@@ -1,5 +1,22 @@
 package com.claire.mind.master.interactive.model;
 
+/**
+ * Three game status that can be used
+ * {@link #IN_PROGRESS}
+ * {@link #PLAYER_VICTORY}
+ * {@link #PLAYER_LOST}
+ */
 public enum GameStatus {
-    IN_PROGRESS, PLAYER_VICTORY, PLAYER_LOST
+    /**
+     * Game is in progress
+     */
+    IN_PROGRESS,
+    /**
+     * Player win this round of game
+     */
+    PLAYER_VICTORY,
+    /**
+     * Player lost this round of game
+     */
+    PLAYER_LOST
 }

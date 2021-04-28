@@ -2,6 +2,7 @@ package com.claire.mind.master.interactive.service;
 
 import com.claire.mind.master.interactive.exception.InvalidGameException;
 import com.claire.mind.master.interactive.exception.InvalidGuessException;
+import com.claire.mind.master.interactive.exception.NoResponseException;
 import com.claire.mind.master.interactive.exception.NotFoundException;
 import com.claire.mind.master.interactive.model.*;
 import com.claire.mind.master.interactive.storage.GameStorage;
@@ -9,44 +10,89 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.net.Authenticator;
+import java.net.InetSocketAddress;
+import java.net.ProxySelector;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.Duration;
 import java.util.*;
 
-// Inject the service to controller
+
+
+/**
+ * Inject the service to controller
+ */
 @Service
 @AllArgsConstructor
 public class GameService {
-    // Pass playerPreference's information and then create a game
-    public Game createGame(PlayerPreference playerPreference) throws IOException, InterruptedException {
+    /**
+     * Create a new game
+     * @param playerPreference String Indicate Easy or Hard game user selected
+     * @return Game Object with gameID and secret generated, along with all other info
+     * @throws IOException
+     * @throws InterruptedException
+     */
+    public Game createGame(PlayerPreference playerPreference) throws IOException, InterruptedException, NoResponseException {
+        // Create new Game object
         Game game = new Game();
+        // Generate UUID as gameId
         game.setGameId(UUID.randomUUID().toString());
         game.setPlayerPreference(playerPreference);
         game.setGuesses(new ArrayList<>());
         game.setStepResults(new ArrayList<>());
-        // need to be replaced later
-        int[] secretNumber = queryNumber("https://www.random.org/integers/?num=4&min=0&max=7&col=4&base=10&format=plain&rnd=new");
+
+
+        String gameLevel = playerPreference.name();
+        int[] secretNumber = new int[Constants.Num_Of_Digits_One_Round];
+        if (gameLevel.equals("EASY")){
+            secretNumber = queryNumber(Constants.EASY_GAME_PATTERN_QUERY);
+        } else if (gameLevel.equals("HARD")){
+            secretNumber = queryNumber(Constants.HARD_GAME_PATTERN_QUERY);
+        }
+
         game.setSecretNumber(secretNumber);
         game.setStatus(GameStatus.IN_PROGRESS);
 
+        // store the game information to the GameStorage
         GameStorage.getInstance().setGame(game);
 
         return game;
     }
 
-    public int[] queryNumber(String uri) throws IOException, InterruptedException {
+
+    /**
+     * Send request and receive response with HttpClient
+     * @param uri String The address of the target web service
+     * @return int[] Four digits int array
+     * @throws IOException
+     * @throws InterruptedException
+     * @throws InterruptedException
+     */
+    public int[] queryNumber(String uri) throws IOException, InterruptedException, NoResponseException {
         int[] secretNumber = new int[4];
+        // Create a request to the target URI
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(uri)).build();
-        HttpClient client = HttpClient.newHttpClient();
+
+        // Create a client
+        HttpClient client = HttpClient.newBuilder()
+                .connectTimeout(Duration.ofSeconds(20))
+                .proxy(ProxySelector.of(new InetSocketAddress("proxy.example.com", 80)))
+                .authenticator(Authenticator.getDefault())
+                .build();
+
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        if (response.statusCode() != 200){
+            throw new NoResponseException(("Failed to get secret number from web service, the " +
+                    "returned statusCode is: " + response.statusCode()));
+        }
+
         String[] responseArray = response.body().trim().split("\\s");
         for (int i = 0; i < 4; i++){
             secretNumber[i] = Integer.parseInt(responseArray[i]);
         }
-        System.out.println("Response: " + response.body());
-
         return secretNumber;
     }
 
@@ -64,7 +110,7 @@ public class GameService {
 
         // add the newGuess to the game
         List<int[]> guesses = game.getGuesses();
-        if (!checkValidRound(guesses, Constants.MAX_GUESSES)){
+        if (!checkValidRound(guesses, Constants.MAX_Rounds_Of_GUESSES)){
             throw new InvalidGuessException("Exceed the Guess number limit");
         }
         int[] newGuess = gameGuess.getGuess();
@@ -83,7 +129,7 @@ public class GameService {
         if (isWin){
             game.setStatus(GameStatus.PLAYER_VICTORY);
         }
-        if (previousResults.size() == Constants.MAX_GUESSES && !(isWin)){
+        if (previousResults.size() == Constants.MAX_Rounds_Of_GUESSES && !(isWin)){
             game.setStatus(GameStatus.PLAYER_LOST);
         }
 
@@ -126,7 +172,7 @@ public class GameService {
     }
 
     public boolean checkWin(StepResult stepResult){
-        if (stepResult.getMatchDigitAndPosition() == Constants.GAME_WIDTH){
+        if (stepResult.getMatchDigitAndPosition() == Constants.Num_Of_Digits_One_Round){
             return true;
         }
         return false;

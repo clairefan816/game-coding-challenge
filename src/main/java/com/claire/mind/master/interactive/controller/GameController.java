@@ -2,6 +2,7 @@ package com.claire.mind.master.interactive.controller;
 
 import com.claire.mind.master.interactive.exception.InvalidGameException;
 import com.claire.mind.master.interactive.exception.InvalidGuessException;
+import com.claire.mind.master.interactive.exception.NoResponseException;
 import com.claire.mind.master.interactive.exception.NotFoundException;
 import com.claire.mind.master.interactive.model.Game;
 import com.claire.mind.master.interactive.model.GameGuess;
@@ -25,7 +26,7 @@ public class GameController {
     private final GameService gameService;
 
     @PostMapping("/game")
-    public ResponseEntity<Game> startNewGame(@RequestBody PlayerPreference playerPreference) throws IOException, InterruptedException {
+    public ResponseEntity<Game> startNewGame(@RequestBody PlayerPreference playerPreference) throws IOException, InterruptedException, NoResponseException {
         log.info("start game request: {}", playerPreference);
         // Wrap response into entity
         // gameService.createGame(playerPreference);
