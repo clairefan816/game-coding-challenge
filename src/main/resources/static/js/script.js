@@ -21,7 +21,7 @@ const create_game = () => {
         dataType: 'json',
         contentType: "application/json",
         data:JSON.stringify({
-            "name":"claire"
+            "PlayerPreference":"EASY"
             }),
         success: function(data){
             currentBoard = data.guesses;

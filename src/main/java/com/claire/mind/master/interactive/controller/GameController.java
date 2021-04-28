@@ -11,10 +11,7 @@ import com.claire.mind.master.interactive.service.GameService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
@@ -24,6 +21,11 @@ import java.io.IOException;
 @RequestMapping("/v1/mindmaster")
 public class GameController {
     private final GameService gameService;
+
+    @GetMapping("/hello")
+    public String hello(@RequestParam(name = "name", defaultValue = "World") String name){
+        return String.format("hello, %s", name);
+    }
 
     @PostMapping("/game")
     public ResponseEntity<Game> startNewGame(@RequestBody PlayerPreference playerPreference) throws IOException, InterruptedException, NoResponseException {

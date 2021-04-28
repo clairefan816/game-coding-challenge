@@ -69,7 +69,7 @@ public class GameService {
      * @throws InterruptedException
      */
     public int[] queryNumber(String uri) throws IOException, InterruptedException, NoResponseException {
-        int[] secretNumber = new int[4];
+        int[] secretNumber = new int[Constants.Num_Of_Digits_One_Round];
         // Create a request to the target URI
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(uri)).build();
 
@@ -87,7 +87,7 @@ public class GameService {
         }
 
         String[] responseArray = response.body().trim().split("\\s");
-        for (int i = 0; i < 4; i++){
+        for (int i = 0; i < Constants.Num_Of_Digits_One_Round; i++){
             secretNumber[i] = Integer.parseInt(responseArray[i]);
         }
         return secretNumber;
@@ -96,20 +96,35 @@ public class GameService {
     // Pass in GameId, Location, and the number
     // Make a move
     // Find the game, put the number in the location
+
+    /**
+     * Play the game, check the game status
+     * @param gameGuess Object Pass in by user with gameID and the guess number
+     * @return Game object
+     * @throws NotFoundException
+     * @throws InvalidGameException
+     * @throws InvalidGuessException
+     */
     public Game playGame(GameGuess gameGuess) throws NotFoundException, InvalidGameException, InvalidGuessException {
         if (!GameStorage.getInstance().getGames().containsKey(gameGuess.getGameId())){
             throw new NotFoundException("Game not found");
         }
+
+        // retrieve the game information from GameStorage
         Game game = GameStorage.getInstance().getGames().get(gameGuess.getGameId());
+
+        // check the current status of the game
         if (!game.getStatus().equals(GameStatus.IN_PROGRESS)){
             throw new InvalidGameException("Not a valid game");
         }
 
         // add the newGuess to the game
         List<int[]> guesses = game.getGuesses();
-        if (!checkValidRound(guesses, Constants.MAX_Rounds_Of_GUESSES)){
+        if (!checkValidRound(guesses)){
             throw new InvalidGuessException("Exceed the Guess number limit");
         }
+
+        // add the new guess into the guesses
         int[] newGuess = gameGuess.getGuess();
         guesses.add(newGuess);
         game.setGuesses(guesses);
@@ -122,7 +137,7 @@ public class GameService {
         previousResults.add(stepResult);
         game.setStepResults(previousResults);
 
-        Boolean isWin = checkWin(stepResult);
+        boolean isWin = checkWin(stepResult);
         if (isWin){
             game.setStatus(GameStatus.PLAYER_VICTORY);
         }
@@ -135,39 +150,55 @@ public class GameService {
         return game;
     }
 
-    private boolean checkValidRound(List<int[]> oldGuesses, int maxLimit) {
+    /**
+     * Check if it is a valid round
+     * @param oldGuesses
+     * @return
+     */
+    private boolean checkValidRound(List<int[]> oldGuesses) {
         int round = oldGuesses.size();
-        if (round + 1 > maxLimit){
+        if (round + 1 > Constants.MAX_Rounds_Of_GUESSES){
             return false;
         }
         return true;
     }
 
+    /**
+     * Compare two int array and return the compared result
+     * @param secretNumber int[]
+     * @param newGuess int[]
+     * @return Object
+     */
     public StepResult checkStepResult(int[] secretNumber, int[] newGuess){
         StepResult stepResult = new StepResult();
         int matchDigitAndPosition = 0;
         int matchDigit = 0;
-        int len = secretNumber.length;
-        // Key is the Digit, Value is the frequency
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < len; i++){
-            map.put(secretNumber[i], map.getOrDefault(secretNumber[i], 0) + 1);
-        }
+        int len = Constants.Num_Of_Digits_One_Round;
 
+        int[] mapSecretNumber = new int[10];
+        int[] mapNewGuess = new int[10];
         for (int i = 0; i < len; i++){
-            if (secretNumber[i] == newGuess[i]){
+            if (mapSecretNumber[i] == mapNewGuess[i]){
                 matchDigitAndPosition++;
-                map.put(secretNumber[i], map.get(secretNumber[i]) - 1);
-            } else if (map.containsKey(newGuess[i]) && map.get(newGuess[i]) != 0){
-                matchDigit++;
-                map.put(newGuess[i], map.get(newGuess[i]) - 1);
+            } else {
+                mapSecretNumber[mapSecretNumber[i]]++;
+                mapNewGuess[mapNewGuess[i]]--;
             }
         }
+        for (int j = 0; j < len; j++){
+            matchDigit += Math.min(mapSecretNumber[j], mapNewGuess[j]);
+        }
+
         stepResult.setA(matchDigitAndPosition);
         stepResult.setB(matchDigit);
         return stepResult;
     }
 
+    /**
+     * Check if player win the game or not
+     * @param stepResult Object
+     * @return true if 4A
+     */
     public boolean checkWin(StepResult stepResult){
         if (stepResult.getA() == Constants.Num_Of_Digits_One_Round){
             return true;
