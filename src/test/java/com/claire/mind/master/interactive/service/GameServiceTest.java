@@ -3,8 +3,6 @@ package com.claire.mind.master.interactive.service;
 import com.claire.mind.master.interactive.MindMasterInteractiveApplication;
 import com.claire.mind.master.interactive.exception.*;
 import com.claire.mind.master.interactive.model.*;
-import com.claire.mind.master.interactive.storage.GameStorage;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,9 +10,7 @@ import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.net.ssl.SSLSession;
 import java.io.IOException;
@@ -93,7 +89,9 @@ public class GameServiceTest {
     @Test
     public void createNewGame_successCreated() throws IOException, NoResponseException,
             InterruptedException {
-        Game game = gameService.createGame(PlayerPreference.EASY);
+        PlayerPreference playerPreference = new PlayerPreference();
+        playerPreference.setPreference("EASY");
+        Game game = gameService.createGame(playerPreference);
         assertNotNull(game.getGameId());
         assertArrayEquals(game.getSecretNumber(), new int[]{1, 2, 3, 4});
         assertEquals("IN_PROGRESS", game.getStatus().toString());
@@ -104,7 +102,9 @@ public class GameServiceTest {
             NoResponseException,
             InterruptedException,
             InvalidGameException, NotFoundException, InvalidGuessException {
-        Game testGame = gameService.createGame(PlayerPreference.HARD);
+        PlayerPreference playerPreference = new PlayerPreference();
+        playerPreference.setPreference("HARD");
+        Game testGame = gameService.createGame(playerPreference);
         String testGameId = testGame.getGameId();
         int[] testGuess1 = {1, 1, 1, 1};
         int[] testGuess2 = {1, 2, 3, 3};
@@ -134,7 +134,9 @@ public class GameServiceTest {
     @Test
     public void checkWinPlay() throws IOException, NoResponseException, InterruptedException,
             InvalidGameException, NotFoundException, InvalidGuessException {
-        Game checkRightResultGame = gameService.createGame(PlayerPreference.HARD);
+        PlayerPreference playerPreference = new PlayerPreference();
+        playerPreference.setPreference("HARD");
+        Game checkRightResultGame = gameService.createGame(playerPreference);
         String testRightGameId = checkRightResultGame.getGameId();
         int[] testRightGuess = {1, 2, 3, 4};
         GameGuess rightGuess = new GameGuess();
@@ -148,7 +150,9 @@ public class GameServiceTest {
     @Test
     public void checkLostPlay() throws IOException, NoResponseException, InterruptedException,
             InvalidGameException, NotFoundException, InvalidGuessException, InvalidParamException {
-        Game checkLostResultGame = gameService.createGame(PlayerPreference.HARD);
+        PlayerPreference playerPreference = new PlayerPreference();
+        playerPreference.setPreference("HARD");
+        Game checkLostResultGame = gameService.createGame(playerPreference);
         String testLostGameId = checkLostResultGame.getGameId();
         int[] oneGuess = {1, 1, 1, 1};
         GameGuess wrongGuess = new GameGuess();

@@ -121,10 +121,21 @@
     width: 80px;
     margin: 5px 5px 5px 5px;
     box-shadow:  5px 5px 15px hsl(331, 15%, 90%);
-    /*background: linear-gradient(135deg, hsl(331, 15%, 90%), hsl(331, 15%, 88%));*/
-    /*!*border-radius: 32px;*!*/
-    /*box-shadow: inset 5px 5px 7px 5px rgba(0, 0, 0, 0.1),*/
-    /*inset -5px -5px 7px 5px rgba(247, 251, 255, 0.6);*/
+    transition: all 0.1s;
+    transition-property: box-shadow;
+}
+
+.one-box:hover {
+    box-shadow: 0 0 8px #EBCDCF;
+}
+
+.key-num{
+    transition: all 0.1s;
+    transition-property: box-shadow;
+}
+
+.key-num:hover{
+    box-shadow: 0 0 8px #EBCDCF;
 }
 
 .letter-content{
@@ -356,9 +367,13 @@
 }
 
 .material-icons.md-36 { font-size: 36px; }
-/* .flip-card:hover .flip-card-inner {
+
+/*.timer-box:hover .flip-card-inner {*/
+/*    transform: rotateY(180deg);*/
+/*}*/
+.instruction-box:hover .flip-card-inner {
     transform: rotateY(180deg);
-  } */
+}
 
 /* Position the front and back side */
 .flip-card-front, .flip-card-back {
@@ -408,5 +423,12 @@
 .choose-button:hover{
     transform: translateY(1px);
     background-color: #FA9965;
+}
+
+.box-content {
+    margin-top: 10px;
+}
+#peek-answer{
+    margin-top: 10px;
 }
 

@@ -1,18 +1,13 @@
 package com.claire.mind.master.interactive.model;
 
 
+import lombok.Data;
+
 /**
  * The difficulty of preferences that can be used
- * {@link #EASY}
- * {@link #HARD}
+ * EASY or HARD
  */
-public enum PlayerPreference {
-    /**
-     * Easy game
-     */
-    EASY,
-    /**
-     * Hard game
-     */
-    HARD
+@Data
+public class PlayerPreference {
+    private String preference;
 }

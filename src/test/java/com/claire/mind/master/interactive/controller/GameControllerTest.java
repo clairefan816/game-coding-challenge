@@ -39,7 +39,8 @@ public class GameControllerTest {
     }
     @Test
     public void givePlayerPreference_whenGenerateNewGame_thenStatus200() throws Exception {
-        PlayerPreference playerPreference = PlayerPreference.EASY;
+        PlayerPreference playerPreference = new PlayerPreference();
+        playerPreference.setPreference("EASY");
         RequestBuilder request = MockMvcRequestBuilders.post("/v1/mindmaster/game");
         this.mvc.perform(request).andExpect(status().isOk()).andReturn();
     }

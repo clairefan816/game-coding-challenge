@@ -108,8 +108,8 @@
                 <div><p>5</p></div>
                 <div><p>6</p></div>
                 <div><p>7</p></div>
-                <div><p>8</p></div>
-                <div><p>9</p></div>
+                <div><p id="hide8">8</p></div>
+                <div><p id="hide9">9</p></div>
             </div>
             <div class="button-cancel circle">Cancel</div>
         </div>
@@ -123,38 +123,34 @@
             <div class="key-num" data-number="5" style="z-index: 7;"></div>
             <div class="key-num" data-number="6" style="z-index: 6;"></div>
             <div class="key-num" data-number="7" style="z-index: 5;"></div>
-            <div class="key-num" data-number="8" style="z-index: 4;"></div>
-            <div class="key-num" data-number="9" style="z-index: 3;"></div>
+            <div class="key-num" id="key-hide-8" data-number="8" style="z-index: 4;"></div>
+            <div class="key-num" id="key-hide-9" data-number="9" style="z-index: 3;"></div>
         </div>
     </div>
     <div class="info-container content">
-        <div class="reset-box">
-            <div class="flip-card" style="z-index: 16">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <p>Start New Game</p>
-                        <div class="choose-button" id="easy">Easy Game</div>
-                        <div class="choose-button">Hard Game</div>
-                        <span class="material-icons md-36 flip" >
-                                chevron_right
-                            </span>
-                    </div>
-                    <div class="flip-card-back">
-                        <p>Back</p>
-                        <span class="material-icons md-36 flip" >
-                                chevron_left
-                            </span>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="timer-box">
             <div class="flip-card" style="z-index: 16">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <p>Timer</p>
+                        <p class="box-content">Settings</p>
+                        <div class="choose-button" id="with-color">With Color</div>
+                        <div class="choose-button" id="with-number">With Number</div>
                     </div>
                     <div class="flip-card-back">
+                        Back
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reset-box">
+            <div class="flip-card" style="z-index: 16">
+                <div class="flip-card-inner">
+                    <div class="front flip-card-front">
+                        <p class="box-content">Start New Game</p>
+                        <div class="choose-button box-content" id="easy">Easy Game</div>
+                        <div class="choose-button box-content" id="hard">Hard Game</div>
+                    </div>
+                    <div class="end flip-card-back">
                         <p>Back</p>
                     </div>
                 </div>
@@ -164,10 +160,12 @@
             <div class="flip-card" style="z-index: 16">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <div id="one-click">More to come</div>
+                        <div class="box-content">GameId:<p id="game-id"></p></div>
+                        <div class="box-content">GameStatus:<p id="game-result"></p></div>
+                        <div class="box-content" >Peek the answer?</div>
                     </div>
                     <div class="flip-card-back">
-                        <p>Back</p>
+                        <p id="peek-answer">Back</p>
                     </div>
                 </div>
             </div>

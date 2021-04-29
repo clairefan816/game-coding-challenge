@@ -37,9 +37,9 @@ public class GameService {
      */
     public Game createGame(PlayerPreference playerPreference) throws IOException, InterruptedException, NoResponseException {
         int[] secretNumber = new int[Constants.Num_Of_Digits_One_Round];
-        if (playerPreference == PlayerPreference.EASY){
+        if (playerPreference.getPreference().equals("EASY")){
             secretNumber = queryNumber(Constants.EASY_GAME_PATTERN_QUERY);
-        } else if (playerPreference == PlayerPreference.HARD){
+        } else if (playerPreference.getPreference().equals("HARD")){
             secretNumber = queryNumber(Constants.HARD_GAME_PATTERN_QUERY);
         }
 
@@ -174,7 +174,7 @@ public class GameService {
                 mapNewGuess[newGuess[i]]++;
             }
         }
-        for (int j = 0; j < len; j++){
+        for (int j = 0; j < 10; j++){
             matchDigit += Math.min(mapSecretNumber[j], mapNewGuess[j]);
         }
 
