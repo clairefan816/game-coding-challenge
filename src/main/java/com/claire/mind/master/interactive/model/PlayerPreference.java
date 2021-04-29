@@ -10,4 +10,6 @@ import lombok.Data;
 @Data
 public class PlayerPreference {
     private String preference;
+    private Boolean withColor;
+    private Boolean withNumber;
 }

@@ -1,9 +1,6 @@
 package com.claire.mind.master.interactive.controller;
 
-import com.claire.mind.master.interactive.exception.InvalidGameException;
-import com.claire.mind.master.interactive.exception.InvalidGuessException;
-import com.claire.mind.master.interactive.exception.NoResponseException;
-import com.claire.mind.master.interactive.exception.NotFoundException;
+import com.claire.mind.master.interactive.exception.*;
 import com.claire.mind.master.interactive.model.Game;
 import com.claire.mind.master.interactive.model.GameGuess;
 import com.claire.mind.master.interactive.model.PlayerPreference;
@@ -22,17 +19,17 @@ import java.io.IOException;
 public class GameController {
     private final GameService gameService;
 
-    @GetMapping("/hello")
-    public String hello(@RequestParam(name = "name", defaultValue = "World") String name){
-        return String.format("hello, %s", name);
-    }
-
     @PostMapping("/game")
     public ResponseEntity<Game> startNewGame(@RequestBody PlayerPreference playerPreference) throws IOException, InterruptedException, NoResponseException {
         log.info("start game request: {}", playerPreference);
         // Wrap response into entity
         // gameService.createGame(playerPreference);
         return ResponseEntity.ok(gameService.createGame(playerPreference));
+    }
+
+    @GetMapping("/game/{gameId}")
+    public ResponseEntity<Game> retrieveOneGame(@PathVariable String gameId) throws InvalidParamException {
+        return ResponseEntity.ok(gameService.retrieveGame(gameId));
     }
 
     @PostMapping("/game/guess")

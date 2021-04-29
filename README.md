@@ -74,6 +74,8 @@ Software programs:
 . Go check them out if you don't have them locally installed.
 
 ## 🤸 Todo
+* **Add more hints** :
+* **Add score** :
 
 ## 👩‍💻 Maintainer
 

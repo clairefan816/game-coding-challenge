@@ -4,13 +4,9 @@ import com.claire.mind.master.interactive.exception.*;
 import com.claire.mind.master.interactive.model.*;
 import com.claire.mind.master.interactive.storage.GameStorage;
 import lombok.AllArgsConstructor;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.net.Authenticator;
-import java.net.InetSocketAddress;
-import java.net.ProxySelector;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
