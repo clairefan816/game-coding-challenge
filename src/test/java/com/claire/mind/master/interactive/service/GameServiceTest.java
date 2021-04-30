@@ -108,13 +108,8 @@ public class GameServiceTest {
         String testGameId = testGame.getGameId();
         int[] testGuess1 = {1, 1, 1, 1};
         int[] testGuess2 = {1, 2, 3, 3};
-        GameGuess gameGuess1 = new GameGuess();
-        GameGuess gameGuess2 = new GameGuess();
-        gameGuess1.setGameId(testGameId);
-        gameGuess1.setGuess(testGuess1);
-
-        gameGuess2.setGameId(testGameId);
-        gameGuess2.setGuess(testGuess2);
+        GameGuess gameGuess1 = new GameGuess(testGameId, testGuess1);
+        GameGuess gameGuess2 = new GameGuess(testGameId, testGuess2);
 
         Game newGame1 = gameService.playGame(gameGuess1);
         Game newGame2 = gameService.playGame(gameGuess2);
@@ -139,9 +134,7 @@ public class GameServiceTest {
         Game checkRightResultGame = gameService.createGame(playerPreference);
         String testRightGameId = checkRightResultGame.getGameId();
         int[] testRightGuess = {1, 2, 3, 4};
-        GameGuess rightGuess = new GameGuess();
-        rightGuess.setGameId(testRightGameId);
-        rightGuess.setGuess(testRightGuess);
+        GameGuess rightGuess = new GameGuess(testRightGameId, testRightGuess);
         Game rightResultGame = gameService.playGame(rightGuess);
         assertEquals(GameStatus.PLAYER_VICTORY, rightResultGame.getStatus());
     }
@@ -155,9 +148,7 @@ public class GameServiceTest {
         Game checkLostResultGame = gameService.createGame(playerPreference);
         String testLostGameId = checkLostResultGame.getGameId();
         int[] oneGuess = {1, 1, 1, 1};
-        GameGuess wrongGuess = new GameGuess();
-        wrongGuess.setGameId(testLostGameId);
-        wrongGuess.setGuess(oneGuess);
+        GameGuess wrongGuess = new GameGuess(testLostGameId, oneGuess);
 
         for (int i = 0; i < 10; i++){
             gameService.playGame(wrongGuess);
@@ -183,5 +174,22 @@ public class GameServiceTest {
         oldGuesses.add(guess);
         boolean isValid = gameService.checkValidRound(oldGuesses);
         assertTrue(isValid);
+    }
+
+    @Test
+    public void successRetrieveGame() throws IOException, NoResponseException, InterruptedException, InvalidParamException {
+        PlayerPreference playerPreference = new PlayerPreference();
+        playerPreference.setPreference("EASY");
+        Game needGame = gameService.createGame(playerPreference);
+        String needGameId = needGame.getGameId();
+        String status = gameService.retrieveGame(needGameId).getStatus().name();
+        assertEquals("IN_PROGRESS", status);
+    }
+
+    @Test(expected = InvalidParamException.class)
+    public void failRetrieveGame() throws IOException, NoResponseException, InterruptedException,
+            InvalidParamException {
+        String noGameId = "";
+        gameService.retrieveGame(noGameId).getStatus().name();
     }
 }

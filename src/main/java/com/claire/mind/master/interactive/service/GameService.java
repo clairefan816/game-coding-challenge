@@ -4,6 +4,7 @@ import com.claire.mind.master.interactive.exception.*;
 import com.claire.mind.master.interactive.model.*;
 import com.claire.mind.master.interactive.storage.GameStorage;
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
