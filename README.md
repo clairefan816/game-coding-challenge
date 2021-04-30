@@ -6,10 +6,11 @@
 
 - [Background](#Background)
 - [Examples](#Examples)
-- [User Feedback](#User Feedback)
 - [Install](#Install)
-- [Maintainer](#Maintainer)
+- [Project Structure](#Project Structure)
+- [Todo](#Todo)
 - [FAQ](#FAQ)
+- [Maintainer](#Maintainer)
 - [Sponsors](#sponsors-)
 - [License](#License)
 
@@ -64,14 +65,84 @@ Colorblind-friendly version or someone who would like to try different version
 
 
 
-## 🔧 Install
-this projects uses 
+## 🔧 Get started
 
-Software programs:
-* Java Development Kit (JDK)
-* Spring Tool Suite IDE (STS)
+### Pre-Installation Requirements
 
-. Go check them out if you don't have them locally installed.
+- [X] Setup Java Development Kit (JDK)
+- [X] Setup an IntelliJ IDE
+
+
+
+
+## 🧬 Project Architecture
+This project follows the Spring MVC framework because the model-view-controller architecture 
+and the ready components offered by Spring can be used to develop a flexible and loosely coupled 
+web application.
+
+The main REST APIS developed in the application serves for main functionalities of this 
+game, including creating new game, retrieving a game, and checking game results.
+
+Here are the three main endpoint URLs:
+```URL
+HTTP method: POST  CRUD: Create  ACTION: Create a new game
+/v1/mindmaster/game
+
+HTTP method: GET  CRUD: Read  Action: Returns a request game
+/v1/mindmaster/game/{gameId}
+
+HTTP method: POST  CRUD: Create  ACTION: Returns a game with answer checked result
+/v1/mindmaster/game/guess
+```
+
+
+This below is the detailed structure of this application:
+
+![musicmind (1)](https://user-images.githubusercontent.com/54572005/116755535-67c8e980-a9bf-11eb-82ec-69db58687ac3.png)
+
+
+* The **Model** encapsulates the application data in the form of POJO. Besides, with **Lambok 
+  library** (java library ) plugin for reducing "infrastructural code".
+  
+  
+* The **Service**
+
+
+* The **Controller** is responsible for taking **User Request** and calls the appropriate 
+  service methods. 
+  
+
+  ```Java
+  @PostMapping("/game")
+    public ResponseEntity<Game> startNewGame(@RequestBody PlayerPreference playerPreference) throws IOException, InterruptedException, NoResponseException {
+        if (!Constants.ALLOWED_LEVELS.contains(playerPreference.getPreference())){
+            throw new BadRequestException(String.format("Game level must be one of: %s",
+                    String.join(", ", Constants.ALLOWED_LEVELS)));
+        }
+        return ResponseEntity.ok(gameService.createGame(playerPreference));
+    }
+  ```
+  ```Java
+  @PostMapping("/game/guess")
+    public ResponseEntity<Game> gamePlay(@RequestBody GameGuess gameGuess) throws InvalidGameException, NotFoundException, InvalidGuessException {
+        Game game = gameService.playGame(gameGuess);
+        return ResponseEntity.ok(game);
+    }
+  ```
+  ```Java
+  @GetMapping("/game/{gameId}")
+    public ResponseEntity<Game> retrieveOneGame(@PathVariable String gameId) throws InvalidParamException {
+        return ResponseEntity.ok(gameService.retrieveGame(gameId));
+    }
+  ```
+* The **Storage**
+
+
+* The **View**
+
+
+* The **Test**
+
 
 ## 🤸 Todo
 * **Add more hints** :
