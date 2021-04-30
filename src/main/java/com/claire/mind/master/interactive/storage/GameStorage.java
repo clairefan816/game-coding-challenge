@@ -1,6 +1,7 @@
 package com.claire.mind.master.interactive.storage;
 
 import com.claire.mind.master.interactive.model.Game;
+import lombok.Synchronized;
 
 import java.util.HashMap;
 import java.util.Map;

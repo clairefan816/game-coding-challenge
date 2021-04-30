@@ -73,6 +73,10 @@ Colorblind-friendly version or someone who would like to try different version
 - [X] Setup an IntelliJ IDE
 
 
+### libs included in this application
+* Lambok Plugin
+
+* SLF4J(Simple Logging Facade for Java)
 
 
 ## 🧬 Project Architecture
@@ -101,7 +105,7 @@ This below is the detailed structure of this application:
 ![musicmind (1)](https://user-images.githubusercontent.com/54572005/116755535-67c8e980-a9bf-11eb-82ec-69db58687ac3.png)
 
 
-* The **Model** encapsulates the application data in the form of POJO. Besides, with **Lambok 
+* The **Model**  encapsulates the application data in the form of POJO. Besides, with **Lambok 
   library** (java library ) plugin for reducing "infrastructural code".
   
   
@@ -109,9 +113,8 @@ This below is the detailed structure of this application:
 
 
 * The **Controller** is responsible for taking **User Request** and calls the appropriate 
-  service methods. 
+  service methods. Here are three main RestAPIs:
   
-
   ```Java
   @PostMapping("/game")
     public ResponseEntity<Game> startNewGame(@RequestBody PlayerPreference playerPreference) throws IOException, InterruptedException, NoResponseException {
@@ -135,13 +138,21 @@ This below is the detailed structure of this application:
         return ResponseEntity.ok(gameService.retrieveGame(gameId));
     }
   ```
-* The **Storage**
+* The **Storage** have used the data structure of `HashMap` for storing the GameId and the Game 
+  object in pairs in **Java Memory**. It implements the **Thread safe singleton patten** for 
+  saving the memory of application, as well as keeping the thread safe when revising the data.
+  
+  
+* The **View** is organized with `HTML`, `CSS`, and some `JQuery`.
 
 
-* The **View**
-
-
-* The **Test**
+* The **Test** includes **unit testing**, **integration testing**, and **user acceptance 
+  testing**.  
+  The **unit test** mainly tests the business logic in service layer with `JUnit4` and `Mockito`.  
+  The **integration test** mainly tests the web layer REST APIs with `MockMvc` and `Mockito`.  
+  The **user acceptance test** mainly tests how my application be accepted by real users. We 
+  have offered this application to three users for getting user feedbacks.
+  
 
 
 ## 🤸 Todo
