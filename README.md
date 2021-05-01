@@ -5,18 +5,16 @@
 > challenge mode. Implemented with Spring by Claire Fan.
 ## 🚩 Table of Contents
 
-- [Background](#Background)
-- [Examples](#Examples)
+- [Introduction](#Introduction)
 - [Install](#Install)
-- [Project Structure](#Project Structure)
+- [Project Architecture](#Project Architecture)
 - [Todo](#Todo)
-- [FAQ](#FAQ)
 - [Maintainer](#Maintainer)
-- [Sponsors](#sponsors-)
+- [FAQ](#FAQ)
 - [License](#License)
 
-## 📕 Background
-### Value of this App
+## 📕 Introduction
+### 💎 Value of this App
 This is a logic game which helps people build critical thinking and inference skills. 
 However, the majority of logic games in the market are unconsciously biased towards using 🔢
 `numbers` or 🔤 `letters` as symbol for inference.
@@ -28,7 +26,7 @@ around with sound patterns.
 Bringing **diversity** into our project, we add colors and sounds as new symbols in this game 
 for enriching user experience in our game.
 
-### Game Rule
+### 🐾  Game Rule
 MusicMind app is a board / decode game adapted from an old British game called `🐂s and 🐄s`.
 The idea of the game is for one player (the code-breaker) to guess the secret code chosen by the 
 other player(the code-maker).  
@@ -46,7 +44,7 @@ For example:
 * Opponent's try: 1538  
 * Answer: 1 🐂 and 2 🐄s (The bull is "1", the cows are "2" and "5".)  
 
-### New Features with Examples 
+### 🎨  New Features with Examples 
 Following the playing rule of `🐂s and 🐄s`, MusicMind develop two more features into 
 this game, 
 decode the color pattern, and the sound pattern.
@@ -77,12 +75,6 @@ to pick from :
   It means there are `10000` possible combinations.
 
 ![gif5](https://user-images.githubusercontent.com/54572005/116771400-e80f3f00-a9ff-11eb-8756-a308dc6adbc4.gif)
-
-## 🎨 Example
-
-## 🐾 User Feedback
-
-
 
 ## 🔧 Install (Linux/Mac)
 
