@@ -3,15 +3,17 @@
 # Musicmind [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 > A web based classical Mastermind game, with added color and pitch
 > challenge mode. Implemented with Spring by Claire Fan.
+
+
 ## 🚩 Table of Contents
 
-- [Introduction](#Introduction)
-- [Install](#Install)
-- [Architecture](#Architecture)
-- [Todo](#Todo)
-- [Maintainer](#Maintainer)
-- [FAQ](#FAQ)
-- [License](#License)
+- [Introduction](#introduction)
+- [Install](#install)
+- [Architecture](#architecture)
+- [Todo](#todo)
+- [Maintainer](#maintainer)
+- [FAQ](#faq)
+- [License](#license)
 
 ## 📕 Introduction
 ### 💎 Value of this App
@@ -185,6 +187,8 @@ This below is the detailed structure of this application:
 
 ## 👩‍💻 Maintainer
 [@ClaireFan](https://github.com/clairefan816)
+
+
 ## 💬 FAQ
 ### It seems something wrong on your app?
 
