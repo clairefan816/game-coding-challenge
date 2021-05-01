@@ -7,7 +7,7 @@
 
 - [Introduction](#Introduction)
 - [Install](#Install)
-- [Project Architecture](#Project Architecture)
+- [Architecture](#Project Architecture)
 - [Todo](#Todo)
 - [Maintainer](#Maintainer)
 - [FAQ](#FAQ)
@@ -92,13 +92,15 @@ git clone https://github.com/clairefan816/game-coding-challenge.git .
 ```
 Now you can play the game from any browser by connecting to ```http://localhost:8080```
 
+Please remember to wear your 🎧 headphone or turn on 🎛️ audio.
+
 ### libs included in this application
 * Lambok Plugin
 
 * SLF4J(Simple Logging Facade for Java)
 
 
-## 🧬 Project Architecture
+## 🧬 Architecture
 This project follows the Spring MVC framework because the model-view-controller architecture 
 and the ready components offered by Spring can be used to develop a flexible and loosely coupled 
 web application.
@@ -186,6 +188,8 @@ This below is the detailed structure of this application:
 If you find a bug (the website couldn't handle the query and gaven undesired results), kindly 
 open an issue [here](https://github.com/clairefan816/game-coding-challenge/issues/new). Please 
 include sample queries and their corresponding results.
+
+### It seems something wrong on your app?
 
 
 ## 📜 License
