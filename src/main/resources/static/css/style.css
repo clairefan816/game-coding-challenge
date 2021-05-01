@@ -428,7 +428,20 @@
 .box-content {
     margin-top: 10px;
 }
-#peek-answer{
+#peek-digit-answer{
     margin-top: 10px;
+}
+
+.peek-color-answer-container{
+    display: flex; !important
+    flex-direction: row; !important
+}
+.peek-color-answer {
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    /*border-radius: 50%;*/
+    margin-left: 10px;
+    margin-right: 10px;
 }
 

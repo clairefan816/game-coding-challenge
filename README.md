@@ -1,7 +1,8 @@
 <img src="src/main/resources/static/images/logo.png" align= "right" width="160px" height="130px"/>
 
 # Musicmind [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-> A web game adapted from classical Mastermind game, with pitch recognition as an added challenge.
+> A web based classical Mastermind game, with added color and pitch
+> challenge mode. Implemented with Spring by Claire Fan.
 ## 🚩 Table of Contents
 
 - [Background](#Background)
@@ -16,37 +17,45 @@
 
 ## 📕 Background
 ### Value of this App
-Why I'd like to develop this app.
-The MUSICMIND app is a single page / single user experience design. 
+This is a logic game which helps people build critical thinking and inference skills. 
+However, the majority of logic games in the market are unconsciously biased towards using 🔢
+`numbers` or 🔤 `letters` as symbol for inference.
 
-Whom can benefit from this app.
+There are many people actually recognize 🌈 `color` or 🎶 `sound` as symbols more efficiently. 
+Little ones who really like colors. Musicians like me has perfect pitch would like to play 
+around with sound patterns.
 
+Bringing **diversity** into our project, we add colors and sounds as new symbols in this game 
+for enriching user experience in our game.
 
-### Game History
+### Game Rule
 MusicMind app is a board / decode game adapted from an old British game called `🐂s and 🐄s`.
 The idea of the game is for one player (the code-breaker) to guess the secret code chosen by the 
 other player(the code-maker).  
 
 The code is a sequence of 4 digits chosen from 0 ~ 9. Then, the code-breaker makes a serie of 
-pattern guesses - after each guess the code-maker gives feedback in the form of 2 numbers. If 
+pattern guesses. **The number can be picked repetitively**. After each guess the code-maker gives 
+feedback in the form of 2 numbers.
+If 
 the matching digits are in the right position, you earn a 🐂, if in different positions, you earn 
 a 🐄.  The code-breaker wins the game by getting the secret number ( earn 4 🐂s in one round ) 
-within 10 rounds.
+within 10 tries.
 
 For example:  
 * Secret number: 1357  
 * Opponent's try: 1538  
 * Answer: 1 🐂 and 2 🐄s (The bull is "1", the cows are "2" and "5".)  
 
-### New Features  
+### New Features with Examples 
 Following the playing rule of `🐂s and 🐄s`, MusicMind develop two more features into 
 this game, 
 decode the color pattern, and the sound pattern.
 
-Users can either play with one mode or three modes:
-* **Guess number pattern** :
-* **Guess color pattern** :
-* **Guess color pattern** :
+Users can choose the symbols used for the game:
+* **Number, color and pitch** :
+* **Number and pitch** :
+* **Color and pitch** :
+* **Pitch only** :
 
 For making this game more friendly to everyone, this app opened two difficulty level for users
 to pick from :
@@ -58,20 +67,26 @@ to pick from :
 
 ## 🎨 Example
 
-  
-Colorblind-friendly version or someone who would like to try different version
-
 ## 🐾 User Feedback
 
 
 
-## 🔧 Get started
+## 🔧 Install (Linux/Mac)
 
 ### Pre-Installation Requirements
 
-- [X] Setup Java Development Kit (JDK)
-- [X] Setup an IntelliJ IDE
+- [X] Setup Java Development Kit (JDK version 11 or later)
 
+### Get Started
+
+Run the following commands in a terminal.
+```
+mkdir musicmind
+cd musicmind
+git clone https://github.com/clairefan816/game-coding-challenge.git .
+./mvnw spring-boot:run
+```
+Now you can play the game from any browser by connecting to ```http://localhost:8080```
 
 ### libs included in this application
 * Lambok Plugin
@@ -164,11 +179,9 @@ This below is the detailed structure of this application:
 ## 💬 FAQ
 ### It seems something wrong on your app?
 
-
 If you find a bug (the website couldn't handle the query and gaven undesired results), kindly 
 open an issue [here](https://github.com/clairefan816/game-coding-challenge/issues/new). Please 
 include sample queries and their corresponding results.
-
 
 
 ## 📜 License

@@ -91,7 +91,7 @@ const create_game = (playerPreference) => {
 const loadPlayerPreferenceInformation = (game) => {
     $('#game-id').text(game.gameId);
     $('#game-result').text(game.status);
-    $('#peek-answer').text(game.secretNumber);
+    $('#peek-digit-answer').text(game.secretNumber);
 }
 
 // if (sessionStorage.getItem("gameId") != null){
@@ -107,7 +107,7 @@ const resetGame = () => {
 
     $('#game-id').text("");
     $('#game-result').text("");
-    $('#peek-answer').text("");
+    $('#peek-digit-answer').text("");
 }
 
 // Create a easy level game

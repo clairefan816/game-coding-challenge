@@ -21,7 +21,8 @@
             width="60" height="50">Can you
         guess the secret number?</div>
     <div class="board-container board-content content">
-        <div class="result-and-guess background-image">
+        <div title="Start game -> pick four in keyboard -> click confirm and check your result"
+             class="result-and-guess background-image">
             <div class="result-container">
                 <div class="one-result round-ten"></div>
                 <div class="one-result round-nine"></div>
@@ -98,7 +99,7 @@
             </div>
         </div>
         <div class="letter-content">
-            <div class="button-confirm circle">Confirm</div>
+            <div class="button-confirm circle" title="Click for checking your guess!">Confirm</div>
             <div class="letter-container">
                 <div><p>0</p></div>
                 <div><p>1</p></div>
@@ -111,7 +112,7 @@
                 <div><p id="hide8">8</p></div>
                 <div><p id="hide9">9</p></div>
             </div>
-            <div class="button-cancel circle">Cancel</div>
+            <div class="button-cancel circle" title="Click for reverting one step!">Cancel</div>
         </div>
 
         <div class="key-container">
@@ -133,8 +134,11 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <p class="box-content">Settings</p>
-                        <div class="choose-button" id="with-color">With Color</div>
-                        <div class="choose-button" id="with-number">With Number</div>
+                        <div class="choose-button" id="with-color"
+                             title="The default setting is with color">With
+                            Color</div>
+                        <div class="choose-button" id="with-number"
+                             title="The default setting is with number">With Number</div>
                     </div>
                     <div class="flip-card-back">
                         Back
@@ -147,8 +151,9 @@
                 <div class="flip-card-inner">
                     <div class="front flip-card-front">
                         <p class="box-content">Start New Game</p>
-                        <div class="choose-button box-content" id="easy">Easy Game</div>
-                        <div class="choose-button box-content" id="hard">Hard Game</div>
+                        <div class="choose-button box-content" id="easy" title="choose number from 0 to 7">Easy Game</div>
+                        <div class="choose-button box-content" id="hard"
+                             title="choose number from 0 to 9">Hard Game</div>
                     </div>
                     <div class="end flip-card-back">
                         <p>Back</p>
@@ -165,7 +170,13 @@
                         <div class="box-content" >Peek the answer?</div>
                     </div>
                     <div class="flip-card-back">
-                        <p id="peek-answer">Back</p>
+                        <p id="peek-digit-answer">The result is:</p>
+                        <div class="pick-color-answer-container">
+                            <span class="peek-color-answer" id="result1"></span>
+                            <span class="peek-color-answer" id="result2"></span>
+                            <span class="peek-color-answer" id="result3"></span>
+                            <span class="peek-color-answer" id="result4"></span>
+                        </div>
                     </div>
                 </div>
             </div>
