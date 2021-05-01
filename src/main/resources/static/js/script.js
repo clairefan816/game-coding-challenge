@@ -24,16 +24,32 @@ let game = {
     }
 }
 
+let webWithColor = true;
+let webWithNumber = true;
+
 // set up the color
+// $(document).ready(function(){
+//     $('#with-color').on('click', function(){
+//         if (game.status === "IN_PROGRESS"){
+//             alert("This setting cannot be adjust during the game!")
+//         } else if (!game.playerPreference.withColor){
+//             game.playerPreference.withColor = true;
+//             $('#with-color').text("With Color");
+//         } else {
+//             game.playerPreference.withColor = false;
+//             $('#with-color').text("No Color")
+//         }
+//         console.log("color: " + game.playerPreference.withColor);
+//     })
+// })
+
 $(document).ready(function(){
     $('#with-color').on('click', function(){
-        if (game.status === "IN_PROGRESS"){
-            alert("This setting cannot be adjust during the game!")
-        } else if (!game.playerPreference.withColor){
-            game.playerPreference.withColor = true;
+        if(webWithColor === false){
+            webWithColor = true;
             $('#with-color').text("With Color");
         } else {
-            game.playerPreference.withColor = false;
+            webWithColor = false;
             $('#with-color').text("No Color")
         }
         console.log("color: " + game.playerPreference.withColor);
@@ -41,22 +57,32 @@ $(document).ready(function(){
 })
 
 // set up the number
-$(document).ready(function(){
-    $('#with-number').on('click', function(){
-        if (game.status === "IN_PROGRESS"){
-            alert("This setting cannot be adjust during the game!")
-        } else if (!game.playerPreference.withNumber){
-            game.playerPreference.withNumber = true;
+// $(document).ready(function(){
+//     $('#with-number').on('click', function(){
+//         if (game.status === "IN_PROGRESS"){
+//             alert("This setting cannot be adjust during the game!")
+//         } else if (!game.playerPreference.withNumber){
+//             game.playerPreference.withNumber = true;
+//             $('#with-number').text("With Number");
+//         } else {
+//             game.playerPreference.withNumber = false;
+//             $('#with-number').text("No Number");
+//         }
+//         console.log("number: " + game.playerPreference.withNumber);
+//     })
+// })
+
+$(document).ready(function() {
+    $('#with-number').on('click', function () {
+        if (webWithNumber === false) {
+            webWithNumber = true;
             $('#with-number').text("With Number");
         } else {
-            game.playerPreference.withNumber = false;
+            webWithNumber = false;
             $('#with-number').text("No Number");
         }
-        console.log("number: " + game.playerPreference.withNumber);
     })
 })
-
-
 
 
 // Create a new game
@@ -122,6 +148,8 @@ $(document).ready(function (){
         resetGame();
 
         game.playerPreference.preference = "EASY";
+        game.playerPreference.withColor = webWithColor;
+        game.playerPreference.withNumber = webWithNumber;
         create_game(game.playerPreference);
 
         $('#hide8').hide();
@@ -140,6 +168,8 @@ $(document).ready(function (){
         round_guess = [];
         resetGame();
         game.playerPreference.preference = "HARD";
+        game.playerPreference.withColor = webWithColor;
+        game.playerPreference.withNumber = webWithNumber;
         create_game(game.playerPreference);
         $('#hide8').show();
         $('#hide9').show();
@@ -157,6 +187,7 @@ $(document).ready(function (){
 
 $(document).ready(function(){
     $('.key-container').on('click', '.key-num', function(){
+        console.log("hehe");
         let selectedNumber = $(this).data("number");
         playSound(selectedNumber)
 
@@ -196,7 +227,8 @@ const playSound = (selectedNumber) => {
     if (game.playerPreference.preference === "HARD" && selectedNumber <= HARD_MAX_INDEX){
         audio_objects[selectedNumber].play();
     }
-    if (game.playerPreference.preference == null){
+    console.log(game.playerPreference.preference);
+    if (game.playerPreference.preference.length === 0){
         audio_objects[selectedNumber].play();
     }
 }

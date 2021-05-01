@@ -634,3 +634,303 @@
 2021-04-30 21:53:49.866  INFO 31905 --- [http-nio-8080-exec-9] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=cfbc0248-f44d-4a83-b787-bf0b8c338992, guess=[0, 4, 2, 6])
 2021-04-30 21:57:45.974  INFO 31905 --- [http-nio-8080-exec-9] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=02bd7574-e631-4796-aae0-08c25f3404a9, guess=[7, 3, 4, 4])
 2021-04-30 21:59:46.513  INFO 31905 --- [http-nio-8080-exec-5] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=dd8e9a51-f1ef-478b-8f39-afe8f5271859, guess=[1, 7, 3, 2])
+2021-04-30 22:41:26.439  INFO 31905 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 22:41:30.012  INFO 38385 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 38385 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 22:41:30.015  INFO 38385 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 22:41:31.042  INFO 38385 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 22:41:31.049  INFO 38385 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 22:41:31.050  INFO 38385 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 22:41:31.106  INFO 38385 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 22:41:31.106  INFO 38385 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1025 ms
+2021-04-30 22:41:31.237  INFO 38385 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 22:41:31.292  INFO 38385 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 22:41:31.390  INFO 38385 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 22:41:31.399  INFO 38385 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.706 seconds (JVM running for 2.331)
+2021-04-30 22:42:17.483  INFO 38385 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 22:42:50.712  INFO 38643 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 38643 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 22:42:50.723  INFO 38643 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 22:42:51.363  INFO 38643 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 22:42:51.369  INFO 38643 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 22:42:51.370  INFO 38643 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 22:42:51.416  INFO 38643 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 22:42:51.416  INFO 38643 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 632 ms
+2021-04-30 22:42:51.543  INFO 38643 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 22:42:51.597  INFO 38643 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 22:42:51.672  INFO 38643 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 22:42:51.683  INFO 38643 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.623 seconds (JVM running for 2.812)
+2021-04-30 22:43:03.632  INFO 38643 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 22:43:03.632  INFO 38643 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 22:43:03.633  INFO 38643 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 22:43:17.840  INFO 38643 --- [http-nio-8080-exec-8] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8c70e15c-dafb-4c9e-a4c6-eb36369e923b, guess=[0, 1, 2, 3])
+2021-04-30 22:43:25.066  INFO 38643 --- [http-nio-8080-exec-5] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8c70e15c-dafb-4c9e-a4c6-eb36369e923b, guess=[4, 5, 6, 7])
+2021-04-30 22:43:40.389  INFO 38643 --- [http-nio-8080-exec-10] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8c70e15c-dafb-4c9e-a4c6-eb36369e923b, guess=[4, 6, 5, 7])
+2021-04-30 22:44:15.049  INFO 38643 --- [http-nio-8080-exec-5] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8c70e15c-dafb-4c9e-a4c6-eb36369e923b, guess=[7, 5, 4, 6])
+2021-04-30 22:44:58.813  INFO 38643 --- [http-nio-8080-exec-7] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8c70e15c-dafb-4c9e-a4c6-eb36369e923b, guess=[6, 5, 7, 4])
+2021-04-30 22:45:28.658  INFO 38643 --- [http-nio-8080-exec-9] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8c70e15c-dafb-4c9e-a4c6-eb36369e923b, guess=[5, 7, 4, 6])
+2021-04-30 22:47:14.935  INFO 38643 --- [http-nio-8080-exec-8] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8c70e15c-dafb-4c9e-a4c6-eb36369e923b, guess=[7, 4, 6, 5])
+2021-04-30 22:47:50.417  INFO 38643 --- [http-nio-8080-exec-4] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8f9c8f6c-cf17-4f73-9629-71b5b178273e, guess=[0, 1, 2, 3])
+2021-04-30 22:48:02.459  INFO 38643 --- [http-nio-8080-exec-6] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8f9c8f6c-cf17-4f73-9629-71b5b178273e, guess=[4, 5, 6, 7])
+2021-04-30 22:48:22.420  INFO 38643 --- [http-nio-8080-exec-1] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8f9c8f6c-cf17-4f73-9629-71b5b178273e, guess=[0, 4, 1, 5])
+2021-04-30 22:49:05.202  INFO 38643 --- [http-nio-8080-exec-2] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8f9c8f6c-cf17-4f73-9629-71b5b178273e, guess=[2, 1, 4, 6])
+2021-04-30 22:49:28.901  INFO 38643 --- [http-nio-8080-exec-10] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8f9c8f6c-cf17-4f73-9629-71b5b178273e, guess=[1, 4, 2, 7])
+2021-04-30 22:49:57.561  INFO 38643 --- [http-nio-8080-exec-7] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8f9c8f6c-cf17-4f73-9629-71b5b178273e, guess=[4, 7, 2, 1])
+2021-04-30 22:50:41.245  INFO 38643 --- [http-nio-8080-exec-1] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=ceb8bdcf-8a08-4ff9-a715-76166ee4e635, guess=[0, 1, 2, 3])
+2021-04-30 22:50:47.598  INFO 38643 --- [http-nio-8080-exec-2] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=ceb8bdcf-8a08-4ff9-a715-76166ee4e635, guess=[6, 7, 8, 9])
+2021-04-30 22:50:55.568  INFO 38643 --- [http-nio-8080-exec-8] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=ceb8bdcf-8a08-4ff9-a715-76166ee4e635, guess=[4, 5, 0, 6])
+2021-04-30 22:51:02.312  INFO 38643 --- [http-nio-8080-exec-6] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=ceb8bdcf-8a08-4ff9-a715-76166ee4e635, guess=[1, 7, 5, 4])
+2021-04-30 22:52:21.426  INFO 38643 --- [http-nio-8080-exec-5] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=ceb8bdcf-8a08-4ff9-a715-76166ee4e635, guess=[5, 0, 6, 6])
+2021-04-30 22:52:49.467  INFO 38643 --- [http-nio-8080-exec-1] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=ceb8bdcf-8a08-4ff9-a715-76166ee4e635, guess=[0, 4, 8, 9])
+2021-04-30 22:53:13.584  INFO 38643 --- [http-nio-8080-exec-3] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=ceb8bdcf-8a08-4ff9-a715-76166ee4e635, guess=[6, 2, 3, 4])
+2021-04-30 22:53:41.100  INFO 38643 --- [http-nio-8080-exec-2] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=ceb8bdcf-8a08-4ff9-a715-76166ee4e635, guess=[2, 6, 2, 4])
+2021-04-30 22:53:50.421  INFO 38643 --- [http-nio-8080-exec-5] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=ceb8bdcf-8a08-4ff9-a715-76166ee4e635, guess=[3, 6, 3, 4])
+2021-04-30 22:55:12.864  INFO 38643 --- [http-nio-8080-exec-9] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=ceb8bdcf-8a08-4ff9-a715-76166ee4e635, guess=[3, 6, 4, 4])
+2021-04-30 22:56:08.352  INFO 38643 --- [http-nio-8080-exec-6] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=52ac2c72-1065-41c5-a383-a687f44bf72e, guess=[7, 7, 7, 7])
+2021-04-30 22:56:11.998  INFO 38643 --- [http-nio-8080-exec-1] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=52ac2c72-1065-41c5-a383-a687f44bf72e, guess=[6, 6, 6, 6])
+2021-04-30 22:56:14.886  INFO 38643 --- [http-nio-8080-exec-9] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=52ac2c72-1065-41c5-a383-a687f44bf72e, guess=[5, 5, 5, 5])
+2021-04-30 22:56:19.312  INFO 38643 --- [http-nio-8080-exec-4] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=52ac2c72-1065-41c5-a383-a687f44bf72e, guess=[4, 3, 2, 1])
+2021-04-30 22:56:25.449  INFO 38643 --- [http-nio-8080-exec-10] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=52ac2c72-1065-41c5-a383-a687f44bf72e, guess=[0, 5, 2, 1])
+2021-04-30 22:56:34.864  INFO 38643 --- [http-nio-8080-exec-8] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=52ac2c72-1065-41c5-a383-a687f44bf72e, guess=[1, 2, 5, 0])
+2021-04-30 22:56:50.691  INFO 38643 --- [http-nio-8080-exec-6] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=52ac2c72-1065-41c5-a383-a687f44bf72e, guess=[2, 1, 0, 5])
+2021-04-30 22:57:26.007  INFO 38643 --- [http-nio-8080-exec-3] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=52ac2c72-1065-41c5-a383-a687f44bf72e, guess=[2, 0, 1, 5])
+2021-04-30 23:03:27.680  INFO 38643 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:03:32.598  INFO 39876 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 39876 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:03:32.602  INFO 39876 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:03:33.310  INFO 39876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:03:33.316  INFO 39876 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:03:33.316  INFO 39876 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:03:33.366  INFO 39876 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:03:33.366  INFO 39876 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 661 ms
+2021-04-30 23:03:33.479  INFO 39876 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:03:33.525  INFO 39876 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:03:33.602  INFO 39876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:03:33.613  INFO 39876 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.535 seconds (JVM running for 2.393)
+2021-04-30 23:03:37.244  INFO 39876 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:03:37.244  INFO 39876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:03:37.245  INFO 39876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-04-30 23:05:09.089  INFO 39876 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:05:12.416  INFO 40057 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 40057 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:05:12.419  INFO 40057 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:05:13.231  INFO 40057 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:05:13.237  INFO 40057 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:05:13.237  INFO 40057 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:05:13.279  INFO 40057 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:05:13.279  INFO 40057 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 780 ms
+2021-04-30 23:05:13.393  INFO 40057 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:05:13.432  INFO 40057 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:05:13.506  INFO 40057 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:05:13.516  INFO 40057 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.528 seconds (JVM running for 2.382)
+2021-04-30 23:05:17.871  INFO 40057 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:05:17.871  INFO 40057 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:05:17.872  INFO 40057 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 23:06:08.911  INFO 40057 --- [http-nio-8080-exec-7] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=098c370e-ff0e-418b-86cf-8ee0b1cb2540, guess=[4, 3, 6, 5])
+2021-04-30 23:06:59.080  INFO 40057 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:07:03.088  INFO 40263 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 40263 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:07:03.093  INFO 40263 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:07:03.912  INFO 40263 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:07:03.917  INFO 40263 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:07:03.918  INFO 40263 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:07:03.952  INFO 40263 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:07:03.952  INFO 40263 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 778 ms
+2021-04-30 23:07:04.101  INFO 40263 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:07:04.143  INFO 40263 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:07:04.224  INFO 40263 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:07:04.232  INFO 40263 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.708 seconds (JVM running for 2.541)
+2021-04-30 23:07:06.624  INFO 40263 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:07:06.625  INFO 40263 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:07:06.626  INFO 40263 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 23:07:51.566  INFO 40263 --- [http-nio-8080-exec-2] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=c4de4881-3976-4803-ad0c-f92f7901a37d, guess=[6, 4, 1, 5])
+2021-04-30 23:09:07.504  INFO 40263 --- [http-nio-8080-exec-9] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=c4de4881-3976-4803-ad0c-f92f7901a37d, guess=[7, 4, 2, 5])
+2021-04-30 23:09:30.275  INFO 40263 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:09:33.833  INFO 40547 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 40547 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:09:33.836  INFO 40547 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:09:34.513  INFO 40547 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:09:34.519  INFO 40547 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:09:34.519  INFO 40547 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:09:34.554  INFO 40547 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:09:34.554  INFO 40547 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 675 ms
+2021-04-30 23:09:34.691  INFO 40547 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:09:34.738  INFO 40547 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:09:34.824  INFO 40547 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:09:34.835  INFO 40547 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.463 seconds (JVM running for 2.402)
+2021-04-30 23:09:42.278  INFO 40547 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:09:42.278  INFO 40547 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:09:42.279  INFO 40547 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 23:10:57.308  INFO 40547 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:11:00.171  INFO 40786 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 40786 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:11:00.181  INFO 40786 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:11:00.928  INFO 40786 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:11:00.935  INFO 40786 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:11:00.936  INFO 40786 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:11:00.985  INFO 40786 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:11:00.986  INFO 40786 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 741 ms
+2021-04-30 23:11:01.106  INFO 40786 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:11:01.162  INFO 40786 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:11:01.246  INFO 40786 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:11:01.257  INFO 40786 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.579 seconds (JVM running for 2.292)
+2021-04-30 23:11:07.767  INFO 40786 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:11:07.767  INFO 40786 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:11:07.768  INFO 40786 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 23:11:50.242  INFO 40786 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:11:54.383  INFO 40990 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 40990 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:11:54.387  INFO 40990 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:11:55.046  INFO 40990 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:11:55.055  INFO 40990 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:11:55.055  INFO 40990 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:11:55.108  INFO 40990 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:11:55.108  INFO 40990 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 651 ms
+2021-04-30 23:11:55.224  INFO 40990 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:11:55.267  INFO 40990 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:11:55.339  INFO 40990 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:11:55.350  INFO 40990 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.747 seconds (JVM running for 2.715)
+2021-04-30 23:11:57.480  INFO 40990 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:11:57.480  INFO 40990 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:11:57.481  INFO 40990 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-04-30 23:15:59.466  INFO 40990 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:16:03.068  INFO 41264 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 41264 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:16:03.070  INFO 41264 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:16:03.828  INFO 41264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:16:03.835  INFO 41264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:16:03.835  INFO 41264 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:16:03.884  INFO 41264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:16:03.884  INFO 41264 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 749 ms
+2021-04-30 23:16:04.002  INFO 41264 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:16:04.046  INFO 41264 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:16:04.127  INFO 41264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:16:04.139  INFO 41264 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.381 seconds (JVM running for 1.996)
+2021-04-30 23:16:09.488  INFO 41264 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:16:09.489  INFO 41264 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:16:09.490  INFO 41264 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 23:17:34.933  INFO 41264 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:17:38.406  INFO 41448 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 41448 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:17:38.408  INFO 41448 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:17:39.043  INFO 41448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:17:39.049  INFO 41448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:17:39.050  INFO 41448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:17:39.085  INFO 41448 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:17:39.086  INFO 41448 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 634 ms
+2021-04-30 23:17:39.214  INFO 41448 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:17:39.281  INFO 41448 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:17:39.370  INFO 41448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:17:39.381  INFO 41448 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.462 seconds (JVM running for 2.067)
+2021-04-30 23:17:42.188  INFO 41448 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:17:42.189  INFO 41448 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:17:42.189  INFO 41448 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-04-30 23:18:35.733  INFO 41448 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:18:38.825  INFO 41631 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 41631 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:18:38.826  INFO 41631 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:18:39.499  INFO 41631 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:18:39.505  INFO 41631 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:18:39.506  INFO 41631 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:18:39.557  INFO 41631 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:18:39.557  INFO 41631 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 687 ms
+2021-04-30 23:18:39.671  INFO 41631 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:18:39.712  INFO 41631 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:18:39.784  INFO 41631 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:18:39.793  INFO 41631 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.278 seconds (JVM running for 1.855)
+2021-04-30 23:18:41.934  INFO 41631 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:18:41.934  INFO 41631 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:18:41.935  INFO 41631 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 23:34:30.979  INFO 41631 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:34:34.519  INFO 42384 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 42384 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:34:34.521  INFO 42384 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:34:35.217  INFO 42384 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:34:35.222  INFO 42384 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:34:35.222  INFO 42384 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:34:35.270  INFO 42384 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:34:35.271  INFO 42384 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 692 ms
+2021-04-30 23:34:35.388  INFO 42384 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:34:35.428  INFO 42384 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:34:35.502  INFO 42384 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:34:35.511  INFO 42384 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.46 seconds (JVM running for 2.282)
+2021-04-30 23:34:42.511  INFO 42384 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:34:42.511  INFO 42384 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:34:42.512  INFO 42384 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 23:35:03.887  INFO 42384 --- [http-nio-8080-exec-3] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=1887a8a0-4ae5-4109-b8d7-513cdc2d0502, guess=[5, 7, 5, 4])
+2021-04-30 23:35:59.364  INFO 42384 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:36:03.130  INFO 42554 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 42554 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:36:03.132  INFO 42554 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:36:03.792  INFO 42554 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:36:03.798  INFO 42554 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:36:03.798  INFO 42554 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:36:03.834  INFO 42554 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:36:03.834  INFO 42554 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 640 ms
+2021-04-30 23:36:03.968  INFO 42554 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:36:04.009  INFO 42554 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:36:04.084  INFO 42554 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:36:04.093  INFO 42554 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.263 seconds (JVM running for 2.027)
+2021-04-30 23:36:07.880  INFO 42554 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:36:07.880  INFO 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:36:07.881  INFO 42554 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 23:36:14.876  INFO 42554 --- [http-nio-8080-exec-5] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=46be502a-3d6e-479d-bac7-6c514b868144, guess=[6, 4, 3, 1])
+2021-04-30 23:36:26.883  INFO 42554 --- [http-nio-8080-exec-6] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=46be502a-3d6e-479d-bac7-6c514b868144, guess=[0, 5, 5, 2])
+2021-04-30 23:36:47.067  INFO 42554 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:36:50.507  INFO 42714 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 42714 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:36:50.510  INFO 42714 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:36:51.312  INFO 42714 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:36:51.318  INFO 42714 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:36:51.319  INFO 42714 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:36:51.373  INFO 42714 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:36:51.373  INFO 42714 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 762 ms
+2021-04-30 23:36:51.487  INFO 42714 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:36:51.535  INFO 42714 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:36:51.619  INFO 42714 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:36:51.628  INFO 42714 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.796 seconds (JVM running for 2.664)
+2021-04-30 23:37:12.303  INFO 42714 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:37:12.303  INFO 42714 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:37:12.304  INFO 42714 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 23:37:24.929  INFO 42714 --- [http-nio-8080-exec-10] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=7377ce4a-e1c7-43cd-87f5-a096cbdce005, guess=[5, 3, 0, 5])
+2021-04-30 23:37:31.610  INFO 42714 --- [http-nio-8080-exec-7] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=7377ce4a-e1c7-43cd-87f5-a096cbdce005, guess=[3, 4, 5, 5])
+2021-04-30 23:38:10.344  INFO 42714 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:38:13.849  INFO 42889 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 42889 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:38:13.854  INFO 42889 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:38:14.581  INFO 42889 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:38:14.587  INFO 42889 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:38:14.587  INFO 42889 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:38:14.632  INFO 42889 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:38:14.632  INFO 42889 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 728 ms
+2021-04-30 23:38:14.747  INFO 42889 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:38:14.790  INFO 42889 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:38:14.869  INFO 42889 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:38:14.880  INFO 42889 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.594 seconds (JVM running for 2.71)
+2021-04-30 23:38:19.274  INFO 42889 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:38:19.275  INFO 42889 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:38:19.275  INFO 42889 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-04-30 23:41:14.395  INFO 42889 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:41:17.971  INFO 43294 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 43294 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:41:17.974  INFO 43294 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:41:18.700  INFO 43294 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:41:18.705  INFO 43294 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:41:18.705  INFO 43294 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:41:18.738  INFO 43294 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:41:18.738  INFO 43294 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 677 ms
+2021-04-30 23:41:18.877  INFO 43294 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:41:18.918  INFO 43294 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:41:18.998  INFO 43294 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:41:19.009  INFO 43294 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.685 seconds (JVM running for 2.441)
+2021-04-30 23:41:33.788  INFO 43294 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:41:33.788  INFO 43294 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:41:33.789  INFO 43294 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 23:41:49.521  INFO 43294 --- [http-nio-8080-exec-5] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=398e480c-8980-4fda-84ae-03a2464be5ee, guess=[3, 2, 5, 2])
+2021-04-30 23:41:53.348  INFO 43294 --- [http-nio-8080-exec-6] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=398e480c-8980-4fda-84ae-03a2464be5ee, guess=[3, 4, 5, 7])
+2021-04-30 23:41:55.493  INFO 43294 --- [http-nio-8080-exec-7] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=398e480c-8980-4fda-84ae-03a2464be5ee, guess=[3, 3, 3, 3])
+2021-04-30 23:42:46.906  INFO 43294 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:42:50.194  INFO 43465 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 43465 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:42:50.198  INFO 43465 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:42:50.862  INFO 43465 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:42:50.869  INFO 43465 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:42:50.869  INFO 43465 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:42:50.903  INFO 43465 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:42:50.903  INFO 43465 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 668 ms
+2021-04-30 23:42:51.034  INFO 43465 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:42:51.095  INFO 43465 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:42:51.214  INFO 43465 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:42:51.223  INFO 43465 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.477 seconds (JVM running for 2.328)
+2021-04-30 23:42:59.736  INFO 43465 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:42:59.736  INFO 43465 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:42:59.737  INFO 43465 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-04-30 23:43:16.614  INFO 43465 --- [http-nio-8080-exec-5] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=01a20000-f28f-4a8b-b1ba-8dac0599c44d, guess=[3, 4, 5, 7])
+2021-04-30 23:43:40.008  INFO 43465 --- [http-nio-8080-exec-9] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=d92b93a2-509f-4b36-9493-df32a055dde3, guess=[4, 1, 3, 6])
+2021-04-30 23:43:42.480  INFO 43465 --- [http-nio-8080-exec-10] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=d92b93a2-509f-4b36-9493-df32a055dde3, guess=[4, 4, 4, 4])
+2021-04-30 23:43:49.355  INFO 43465 --- [http-nio-8080-exec-2] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=d92b93a2-509f-4b36-9493-df32a055dde3, guess=[6, 6, 3, 6])
+2021-04-30 23:43:52.050  INFO 43465 --- [http-nio-8080-exec-3] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=d92b93a2-509f-4b36-9493-df32a055dde3, guess=[3, 4, 5, 6])
+2021-04-30 23:44:50.509  INFO 43465 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

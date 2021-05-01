@@ -41,7 +41,7 @@ within 10 tries.
 
 For example:  
 * Secret number: 1357  
-* Opponent's try: 1538  
+* Player's try: 1538  
 * Answer: 1 🐂 and 2 🐄s (The bull is "1", the cows are "2" and "5".)  
 
 ### 🎨  New Features with Examples 
@@ -98,11 +98,11 @@ Now you can play the game from any browser by connecting to ```http://localhost:
 
 Please remember to wear your 🎧 headphone or turn on 🎛️ audio.
 
-### libs included in this application
+### Additional libs used in this application
 * Lambok Plugin
-
 * SLF4J(Simple Logging Facade for Java)
-
+* Mockito
+* JUnit4
 
 ## 🧬 Architecture
 This project follows the Spring MVC framework because the model-view-controller architecture 
@@ -182,10 +182,12 @@ This below is the detailed structure of this application:
 
 
 ## 🤸 Todo
-* **Add more hints** :
-* **Add score** :
+* Should add assistance tool that helps player remove impossible choices
+* Add history and allow user see results of past games
+* Create an android client for the game
 
 ## 👩‍💻 Maintainer
+[Claire Fan](mailto:clairefan816@gmail.com)
 
 ## 💬 FAQ
 ### It seems something wrong on your app?
@@ -193,8 +195,5 @@ This below is the detailed structure of this application:
 If you find a bug (the website couldn't handle the query and gaven undesired results), kindly 
 open an issue [here](https://github.com/clairefan816/game-coding-challenge/issues/new). Please 
 include sample queries and their corresponding results.
-
-### It seems something wrong on your app?
-
 
 ## 📜 License
