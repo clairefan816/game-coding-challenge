@@ -14,3 +14,4 @@
 2021-05-01 01:51:33.426  INFO 50818 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-05-01 01:51:33.427  INFO 50818 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2021-05-01 01:51:45.469  INFO 50818 --- [http-nio-8080-exec-6] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8b270430-34f8-4569-b10c-5c5a67f37359, guess=[2, 3, 5, 7])
+2021-05-01 01:53:04.801  INFO 50818 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
