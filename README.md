@@ -53,9 +53,21 @@ decode the color pattern, and the sound pattern.
 
 Users can choose the symbols used for the game:
 * **Number, color and pitch** :
+
+![gif1](https://user-images.githubusercontent.com/54572005/116771186-4d623080-a9fe-11eb-98e3-a1d3045688ea.gif)
 * **Number and pitch** :
+  
+![gif2](https://user-images.githubusercontent.com/54572005/116771278-e5f8b080-a9fe-11eb-97a4-f986166bf3cc.gif)
+
 * **Color and pitch** :
+
+![gif3](https://user-images.githubusercontent.com/54572005/116771328-48ea4780-a9ff-11eb-9d08-ed87b6567dd9.gif)
+
 * **Pitch only** :
+  
+![gif4](https://user-images.githubusercontent.com/54572005/116771385-d6c63280-a9ff-11eb-8f19-740fd808d1c8.gif)
+  
+
 
 For making this game more friendly to everyone, this app opened two difficulty level for users
 to pick from :
@@ -64,6 +76,7 @@ to pick from :
 * **Hard Level** : The secret number / color / sound pattern is picked from 10 candidates.
   It means there are `10000` possible combinations.
 
+![gif5](https://user-images.githubusercontent.com/54572005/116771400-e80f3f00-a9ff-11eb-8756-a308dc6adbc4.gif)
 
 ## 🎨 Example
 
@@ -75,10 +88,9 @@ to pick from :
 
 ### Pre-Installation Requirements
 
-- [X] Setup Java Development Kit (JDK version 11 or later)
+- [x] Setup Java Development Kit (JDK version 11 or later)
 
 ### Get Started
-
 Run the following commands in a terminal.
 ```
 mkdir musicmind

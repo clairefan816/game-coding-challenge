@@ -43,14 +43,6 @@ public class GameControllerTest {
     private GameService gameService;
 
     @Test
-    public void hello() throws Exception {
-        RequestBuilder request = MockMvcRequestBuilders.get("/v1/mindmaster/hello");
-        MvcResult result = mvc.perform(request).andReturn();
-        assertEquals("hello, World", result.getResponse().getContentAsString());
-    }
-
-
-    @Test
     public void givePlayerPreference_whenGenerateNewGame_thenStatus200() throws Exception {
         PlayerPreference playerPreference = new PlayerPreference();
         playerPreference.setPreference("EASY");

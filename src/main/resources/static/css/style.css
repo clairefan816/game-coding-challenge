@@ -437,11 +437,9 @@
     flex-direction: row; !important
 }
 .peek-color-answer {
-    border: 1px solid black;
     height: 30px;
     width: 30px;
-    /*border-radius: 50%;*/
-    margin-left: 10px;
-    margin-right: 10px;
+    border-radius: 90%;
+    color:rgba(225, 225, 225, 0.0);
 }
 

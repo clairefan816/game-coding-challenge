@@ -92,6 +92,11 @@ const loadPlayerPreferenceInformation = (game) => {
     $('#game-id').text(game.gameId);
     $('#game-result').text(game.status);
     $('#peek-digit-answer').text(game.secretNumber);
+    let resultArray = [...game.secretNumber];
+    $('#result1').css('background-color',colors[resultArray[0]]);
+    $('#result2').css('background-color',colors[resultArray[1]]);
+    $('#result3').css('background-color',colors[resultArray[2]]);
+    $('#result4').css('background-color',colors[resultArray[3]]);
 }
 
 // if (sessionStorage.getItem("gameId") != null){
