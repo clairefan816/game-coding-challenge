@@ -333,12 +333,6 @@
 
 
 
-
-
-
-
-
-
 .info-container{
     grid-area: info-container;
     height: 90%;
@@ -368,9 +362,6 @@
 
 .material-icons.md-36 { font-size: 36px; }
 
-/*.timer-box:hover .flip-card-inner {*/
-/*    transform: rotateY(180deg);*/
-/*}*/
 .instruction-box:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
