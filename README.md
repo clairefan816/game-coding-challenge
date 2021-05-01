@@ -7,7 +7,7 @@
 
 - [Introduction](#Introduction)
 - [Install](#Install)
-- [Architecture](#Project Architecture)
+- [Architecture](#Architecture)
 - [Todo](#Todo)
 - [Maintainer](#Maintainer)
 - [FAQ](#FAQ)
