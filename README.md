@@ -75,16 +75,24 @@ to pick from :
   It means there are `4096` possible combinations.
 * **Hard Level** : The secret number / color / sound pattern is picked from 10 candidates.
   It means there are `10000` possible combinations.
+  
+> Just a kindly reminder, if you get stuck on the game, feel free to peek the result by hovering 
+> your 
+> cursor to the right corner card.
 
 ![gif5](https://user-images.githubusercontent.com/54572005/116771400-e80f3f00-a9ff-11eb-8756-a308dc6adbc4.gif)
 
-## 🔧 Install (Linux/Mac)
+## 🔧 Install
 
 ### Pre-Installation Requirements
 
 - [x] Setup Java Development Kit (JDK version 11 or later)
+- [x] Setup Git
 
+  
 ### Get Started
+* Linux/Mac
+
 Run the following commands in a terminal.
 ```
 mkdir musicmind
@@ -96,11 +104,28 @@ Now you can play the game from any browser by connecting to ```http://localhost:
 
 Please remember to wear your 🎧 headphone or turn on 🎛️ audio.
 
+* Windows
+
+> Before you clone this project, please double-check whether the JAVA_HOME variable in your
+> environment matches the location of your Java installation.
+
+Run the following commands in a terminal.
+```
+md musicmind
+cd musicmind
+git clone https://github.com/clairefan816/game-coding-challenge.git
+cd game-coding-challenge
+mvnw.cmd spring-boot:run
+```
+Now you can play the game from any browser by connecting to ```http://localhost:8080```
+
+
 ### Additional libs used in this application
 * Lombok Plugin
 * SLF4J(Simple Logging Facade for Java)
 * Mockito
 * JUnit4
+* [Integer Generator API](https://www.random.org/clients/http/api/)
 
 ## 🧬 Architecture
 This project follows the Spring MVC framework because the model-view-controller architecture 
