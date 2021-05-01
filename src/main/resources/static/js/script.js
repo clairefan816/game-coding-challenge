@@ -36,7 +36,6 @@ $(document).ready(function(){
             webWithColor = false;
             $('#with-color').text("No Color")
         }
-        console.log("color: " + game.playerPreference.withColor);
     })
 })
 
@@ -93,9 +92,6 @@ const loadPlayerPreferenceInformation = (game) => {
     $('#result4').css('background-color',colors[resultArray[3]]);
 }
 
-// if (sessionStorage.getItem("gameId") != null){
-//     $('.box-content').load("http://localhost:8080/v1/mindmaster/" + sessionStorage.getItem("gameId"))
-// }
 
 const resetGame = () => {
     // reset result board
@@ -124,7 +120,6 @@ $(document).ready(function (){
         $('#hide9').hide();
         $('#key-hide-8').css('cursor', 'not-allowed');
         $('#key-hide-9').css('cursor', 'not-allowed');
-        console.log(game.gameId);
     })
 })
 
@@ -143,7 +138,6 @@ $(document).ready(function (){
         $('#hide9').show();
         $('#key-hide-8').css('cursor', 'grab');
         $('#key-hide-9').css('cursor', 'grab');
-        console.log(game.gameId);
     })
 })
 
@@ -155,7 +149,6 @@ $(document).ready(function (){
 
 $(document).ready(function(){
     $('.key-container').on('click', '.key-num', function(){
-        console.log("hehe");
         let selectedNumber = $(this).data("number");
         playSound(selectedNumber)
 
@@ -182,7 +175,6 @@ $(document).ready(function(){
                     }
                 }
             }
-            console.log(round_guess);
         }
 
     })
@@ -195,7 +187,6 @@ const playSound = (selectedNumber) => {
     if (game.playerPreference.preference === "HARD" && selectedNumber <= HARD_MAX_INDEX){
         audio_objects[selectedNumber].play();
     }
-    console.log(game.playerPreference.preference);
     if (game.playerPreference.preference.length === 0){
         audio_objects[selectedNumber].play();
     }
@@ -211,10 +202,8 @@ $(document).ready(function(){
                 let boxNum = 4 * rowNum + round_guess.length - 1;
                 $('.one-box:eq('+boxNum+')').text("").css("background-color","white");
                 round_guess.pop();
-
             }
         }
-        console.log(round_guess);
     })
 })
 
@@ -232,7 +221,6 @@ const one_round_guess = (round_guess, gameId) =>{
             "gameId": gameId
         }),
         success: function(data){
-            console.log(data);
             game = {
                 gameId : data.gameId,
                 secretNumber : data.secretNumber,
