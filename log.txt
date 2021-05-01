@@ -953,3 +953,19 @@
 2021-04-30 23:49:50.861  INFO 43914 --- [http-nio-8080-exec-10] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=f08ef698-f1a2-4dc2-a5ae-b11129dc696d, guess=[6, 4, 3, 1])
 2021-04-30 23:50:09.128  INFO 43914 --- [http-nio-8080-exec-1] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=f08ef698-f1a2-4dc2-a5ae-b11129dc696d, guess=[5, 2, 6, 4])
 2021-04-30 23:50:18.145  INFO 43914 --- [http-nio-8080-exec-3] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=f08ef698-f1a2-4dc2-a5ae-b11129dc696d, guess=[5, 3, 6, 3])
+2021-04-30 23:56:39.538  INFO 43914 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:56:42.614  INFO 44455 --- [main] c.m.m.i.MindMasterInteractiveApplication : Starting MindMasterInteractiveApplication using Java 16.0.1 on claire-desktop with PID 44455 (/home/claire/coding/CodingChallenge/mind-master-interactive/target/classes started by claire in /home/claire/coding/CodingChallenge/mind-master-interactive)
+2021-04-30 23:56:42.619  INFO 44455 --- [main] c.m.m.i.MindMasterInteractiveApplication : No active profile set, falling back to default profiles: default
+2021-04-30 23:56:43.213  INFO 44455 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-30 23:56:43.218  INFO 44455 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-30 23:56:43.219  INFO 44455 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-30 23:56:43.261  INFO 44455 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-30 23:56:43.262  INFO 44455 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 573 ms
+2021-04-30 23:56:43.378  INFO 44455 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-30 23:56:43.419  INFO 44455 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-30 23:56:43.500  INFO 44455 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-30 23:56:43.509  INFO 44455 --- [main] c.m.m.i.MindMasterInteractiveApplication : Started MindMasterInteractiveApplication in 1.298 seconds (JVM running for 2.115)
+2021-04-30 23:56:49.159  INFO 44455 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-30 23:56:49.159  INFO 44455 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-30 23:56:49.161  INFO 44455 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-30 23:57:10.766  INFO 44455 --- [http-nio-8080-exec-10] c.c.m.m.i.controller.GameController      : gameplay : GameGuess(gameId=8278ae73-06d9-4b30-bcab-e8319509ee2a, guess=[6, 3, 2, 1])

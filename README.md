@@ -15,29 +15,24 @@
 
 ## 📕 Introduction
 ### 💎 Value of this App
-This is a logic game which helps people build critical thinking and inference skills. 
+This is a logic game that helps people build critical thinking and inference skills.
 However, the majority of logic games in the market are unconsciously biased towards using 🔢
-`numbers` or 🔤 `letters` as symbol for inference.
+`numbers` or 🔤 `letters` as the symbol for inference.
 
-There are many people actually recognize 🌈 `color` or 🎶 `sound` as symbols more efficiently. 
-Little ones who really like colors. Musicians like me has perfect pitch would like to play 
-around with sound patterns.
+Many people actually recognize 🌈 `color` or 🎶 `sound` as symbols more efficiently.
+Little ones who really like colors. Musicians like me who have perfect pitch would like to play around with sound patterns.
 
-Bringing **diversity** into our project, we add colors and sounds as new symbols in this game 
-for enriching user experience in our game.
+Bringing **diversity** into our project, I add colors and sounds as new symbols in this game for 
+enriching the user experience in our game.
 
 ### 🐾  Game Rule
-MusicMind app is a board / decode game adapted from an old British game called `🐂s and 🐄s`.
-The idea of the game is for one player (the code-breaker) to guess the secret code chosen by the 
-other player(the code-maker).  
+MusicMind app is a board/decode game adapted from an old British game called `🐂s and 🐄s`.
+The idea of the game is for one player (the code-breaker) to guess the secret code chosen by the other player(the code-maker).
 
-The code is a sequence of 4 digits chosen from 0 ~ 9. Then, the code-breaker makes a serie of 
-pattern guesses. **The number can be picked repetitively**. After each guess the code-maker gives 
+The code is a sequence of 4 digits chosen from 0 ~ 9. Then, the code-breaker makes a series of pattern guesses. **The number can be picked repetitively**. After each guess the code-maker gives
 feedback in the form of 2 numbers.
-If 
-the matching digits are in the right position, you earn a 🐂, if in different positions, you earn 
-a 🐄.  The code-breaker wins the game by getting the secret number ( earn 4 🐂s in one round ) 
-within 10 tries.
+If
+the matching digits are in the right position, you earn a 🐂, if, in different positions, you earn a 🐄.  The code-breaker wins the game by getting the secret number ( earn 4 🐂s in one round ) within 10 tries.
 
 For example:  
 * Secret number: 1357  
@@ -46,11 +41,10 @@ For example:
 
 ### 🎨  New Features with Examples 
 Following the playing rule of `🐂s and 🐄s`, MusicMind develop two more features into 
-this game, 
-decode the color pattern, and the sound pattern.
+this game, decode the color pattern, and the sound pattern.
 
 Users can choose the symbols used for the game:
-* **Number, color and pitch** : The default setting of the application is to play both with 
+* **Number, color, and pitch** : The default setting of the application is to play both with 
   color and sound.
 
 ![gif1](https://user-images.githubusercontent.com/54572005/116771186-4d623080-a9fe-11eb-98e3-a1d3045688ea.gif)
@@ -60,12 +54,14 @@ Users can choose the symbols used for the game:
   
 ![gif2](https://user-images.githubusercontent.com/54572005/116771278-e5f8b080-a9fe-11eb-97a4-f986166bf3cc.gif)
 
-* **Color and pitch** : Disable the number through clicking the `With Number` and turn it into 
+* **Color and pitch** : Disable the number by clicking the `With Number` and turn it into 
   `Without Number`.
 
 ![gif3](https://user-images.githubusercontent.com/54572005/116771328-48ea4780-a9ff-11eb-9d08-ed87b6567dd9.gif)
 
-* **Pitch only** : Disable both number and sound, and make the presentation board with a dark color.
+* **Pitch only** : Disable both number and sound, and no special sign, instead of a dark color, 
+  shown on the result board.
+  
   
 ![gif4](https://user-images.githubusercontent.com/54572005/116771385-d6c63280-a9ff-11eb-8f19-740fd808d1c8.gif)
   
@@ -99,7 +95,7 @@ Now you can play the game from any browser by connecting to ```http://localhost:
 Please remember to wear your 🎧 headphone or turn on 🎛️ audio.
 
 ### Additional libs used in this application
-* Lambok Plugin
+* Lombok Plugin
 * SLF4J(Simple Logging Facade for Java)
 * Mockito
 * JUnit4
@@ -109,8 +105,8 @@ This project follows the Spring MVC framework because the model-view-controller 
 and the ready components offered by Spring can be used to develop a flexible and loosely coupled 
 web application.
 
-The main REST APIS developed in the application serves for main functionalities of this 
-game, including creating new game, retrieving a game, and checking game results.
+The main REST APIS developed in the application serves for the main functionalities of this
+game, including creating a new game, retrieving a game, and checking game results.
 
 Here are the three main endpoint URLs:
 ```URL
@@ -130,7 +126,7 @@ This below is the detailed structure of this application:
 ![musicmind (1)](https://user-images.githubusercontent.com/54572005/116755535-67c8e980-a9bf-11eb-82ec-69db58687ac3.png)
 
 
-* The **Model**  encapsulates the application data in the form of POJO. Besides, with **Lambok 
+* The **Model**  encapsulates the application data in the form of POJO. Besides, with **Lombok 
   library** (java library ) plugin for reducing "infrastructural code".
   
   
@@ -165,8 +161,8 @@ This below is the detailed structure of this application:
     }
   ```
 * The **Storage** have used the data structure of `HashMap` for storing the GameId and the Game 
-  object in pairs in **Java Memory**. It implements the **Thread safe singleton patten** for 
-  saving the memory of application, as well as keeping the thread safe when revising the data.
+  object in pairs in **Java Memory**. It implements the **Thread safe singleton pattern** for 
+  saving the memory of the application, as well as keeping the thread safe when revising the data.
   
   
 * The **View** is organized with `HTML`, `CSS`, and some `JQuery`.
@@ -174,10 +170,11 @@ This below is the detailed structure of this application:
 
 * The **Test** includes **unit testing**, **integration testing**, and **user acceptance 
   testing**.  
-  The **unit test** mainly tests the business logic in service layer with `JUnit4` and `Mockito`.  
+  The **unit test** mainly tests the business logic in the service layer with `JUnit4` and 
+  `Mockito`.  
   The **integration test** mainly tests the web layer REST APIs with `MockMvc` and `Mockito`.  
   The **user acceptance test** mainly tests how my application be accepted by real users. We 
-  have offered this application to three users for getting user feedbacks.
+  have offered this application to three users for getting user feedback.
   
 
 
@@ -187,13 +184,14 @@ This below is the detailed structure of this application:
 * Create an android client for the game
 
 ## 👩‍💻 Maintainer
-[Claire Fan](mailto:clairefan816@gmail.com)
-
+[@ClaireFan](https://github.com/clairefan816)
 ## 💬 FAQ
 ### It seems something wrong on your app?
 
-If you find a bug (the website couldn't handle the query and gaven undesired results), kindly 
+If you find a bug (the website couldn't handle the query and give undesired results), kindly 
 open an issue [here](https://github.com/clairefan816/game-coding-challenge/issues/new). Please 
 include sample queries and their corresponding results.
 
 ## 📜 License
+
+Musicmind is [MIT licenced](https://github.com/clairefan816/game-coding-challenge/blob/9668bf2508d63b5dd01a414f9b5e38f45b27f1fd/LICENSE)
