@@ -50,18 +50,22 @@ this game,
 decode the color pattern, and the sound pattern.
 
 Users can choose the symbols used for the game:
-* **Number, color and pitch** :
+* **Number, color and pitch** : The default setting of the application is to play both with 
+  color and sound.
 
 ![gif1](https://user-images.githubusercontent.com/54572005/116771186-4d623080-a9fe-11eb-98e3-a1d3045688ea.gif)
-* **Number and pitch** :
+
+* **Number and pitch** : Disable the color through clicking the `With Color` and turn it into 
+  `Without Color`.
   
 ![gif2](https://user-images.githubusercontent.com/54572005/116771278-e5f8b080-a9fe-11eb-97a4-f986166bf3cc.gif)
 
-* **Color and pitch** :
+* **Color and pitch** : Disable the number through clicking the `With Number` and turn it into 
+  `Without Number`.
 
 ![gif3](https://user-images.githubusercontent.com/54572005/116771328-48ea4780-a9ff-11eb-9d08-ed87b6567dd9.gif)
 
-* **Pitch only** :
+* **Pitch only** : Disable both number and sound, and make the presentation board with a dark color.
   
 ![gif4](https://user-images.githubusercontent.com/54572005/116771385-d6c63280-a9ff-11eb-8f19-740fd808d1c8.gif)
   
@@ -130,7 +134,8 @@ This below is the detailed structure of this application:
   library** (java library ) plugin for reducing "infrastructural code".
   
   
-* The **Service**
+* The **Service** includes all business logics, such as creating the random secret number, as 
+  well as calculating the guess result.
 
 
 * The **Controller** is responsible for taking **User Request** and calls the appropriate 
