@@ -27,22 +27,6 @@ let game = {
 let webWithColor = true;
 let webWithNumber = true;
 
-// set up the color
-// $(document).ready(function(){
-//     $('#with-color').on('click', function(){
-//         if (game.status === "IN_PROGRESS"){
-//             alert("This setting cannot be adjust during the game!")
-//         } else if (!game.playerPreference.withColor){
-//             game.playerPreference.withColor = true;
-//             $('#with-color').text("With Color");
-//         } else {
-//             game.playerPreference.withColor = false;
-//             $('#with-color').text("No Color")
-//         }
-//         console.log("color: " + game.playerPreference.withColor);
-//     })
-// })
-
 $(document).ready(function(){
     $('#with-color').on('click', function(){
         if(webWithColor === false){
@@ -55,22 +39,6 @@ $(document).ready(function(){
         console.log("color: " + game.playerPreference.withColor);
     })
 })
-
-// set up the number
-// $(document).ready(function(){
-//     $('#with-number').on('click', function(){
-//         if (game.status === "IN_PROGRESS"){
-//             alert("This setting cannot be adjust during the game!")
-//         } else if (!game.playerPreference.withNumber){
-//             game.playerPreference.withNumber = true;
-//             $('#with-number').text("With Number");
-//         } else {
-//             game.playerPreference.withNumber = false;
-//             $('#with-number').text("No Number");
-//         }
-//         console.log("number: " + game.playerPreference.withNumber);
-//     })
-// })
 
 $(document).ready(function() {
     $('#with-number').on('click', function () {
@@ -356,6 +324,3 @@ const loadGuessBoard = (currentBoard) => {
         }
     }
 }
-
-
-
